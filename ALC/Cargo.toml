@@ -1,0 +1,13 @@
+[package]
+name = "ALC"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "ALC"
+path = "src/main.rs"
+
+[dependencies]
+artificial-core = { path = "../artificial-core" }
+artificial-backend-rust = { path = "../artificial-backend-rust" }
+

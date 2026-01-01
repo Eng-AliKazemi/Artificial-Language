@@ -1,0 +1,20 @@
+# Rust build artifacts
+/target
+/debug
+/release
+**/*.rs.bk
+Cargo.lock
+
+# Generated compiler outputs
+target/artificial_out/
+**/*_art.rs
+**/*_art
+
+# OS & IDE junk
+.DS_Store
+*.log
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

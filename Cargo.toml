@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = [
+    "artificial-core",
+    "artificial-backend-rust",
+    "ALC"
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
