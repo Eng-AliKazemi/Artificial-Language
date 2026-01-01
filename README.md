@@ -6,7 +6,11 @@
   <h1>Artificial Language</h1>
   <p><strong>The World’s First Programming Language Created Entirely by AI</strong></p>
 
-  <img src="https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white" alt="Rust" />
+<p align="center">
+  <img src="https://img.shields.io/badge/Artificial-Intelligence-%23007ACC.svg?style=for-the-badge" height="28" alt="Artificial Intelligence" />
+  <img src="https://img.shields.io/badge/Architected_by-LLM-%238A2BE2.svg?style=for-the-badge" height="28" alt="Architected by LLM" />
+</p>
+
 </div>
 
 # The Genesis of AI-Driven Programming
