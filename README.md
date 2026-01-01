@@ -93,9 +93,9 @@ This decoupled design also allows for entirely new backends to be added. For ins
 
 ---
 
-## The [`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md)
+## The `AI_INSTRUCTIONS.md`
 
-Included in this repository is the `AI_INSTRUCTIONS.md` file, provided for researchers, engineers, and enthusiasts to see how modern, professional prompt engineering works. This is not a simple instruction; it is a professional-grade specification that an autonomous agent can execute. Key methods used include:
+Included in this repository is the [`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md)file, provided for researchers, engineers, and enthusiasts to see how modern, professional prompt engineering works. This is not a simple instruction; it is a professional-grade specification that an autonomous agent can execute. Key methods used include:
 
 *   **Role Assignment:** The AI was instructed to act as a "senior-level Rust engineer," adopting the best practices and expertise associated with that role.
 *   **Goal-Oriented Directives:** A clear, singular mission was defined with precise success criteria.
