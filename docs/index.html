@@ -1,15 +1,115 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- ==============================================
+         PRIMARY SEO METADATA
+         ============================================== -->
+    <title>Artificial Language (AL) | The First AI-Architected Programming Language</title>
+    <meta name="title" content="Artificial Language (AL) | The First AI-Architected Programming Language">
+    <meta name="description" content="The world’s first programming language created entirely by AI. Discover Artificial Language (AL), featuring the 'accrete' primitive, AI-native compilation, and the .art syntax canvas. Developed by Aran Kazemi.">
+    <meta name="keywords" content="Artificial Language, AL, AI Programming Language, AI Compiler, Accrete Keyword, .art file extension, Aran Kazemi, Autonomous Software Development, Rust, LLM Coding, Self-writing Software, APoC">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Aran Kazemi">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="application-name" content="Artificial Language">
+
+    <!-- ==============================================
+         GEO & REGIONAL METADATA
+         ============================================== -->
+    <meta name="geo.region" content="Global">
+    <meta name="geo.placename" content="World Wide Web">
+    <meta name="distribution" content="Global">
+    <meta name="coverage" content="Worldwide">
+    <!-- Note: Since this is digital software, we use Global coverage rather than physical coordinates -->
+
+    <!-- ==============================================
+         OPEN GRAPH / FACEBOOK / LINKEDIN
+         ============================================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Eng-AliKazemi/Artificial-Language">
+    <meta property="og:title" content="Artificial Language | The First AI-Architected Language">
+    <meta property="og:description" content="Beyond Copilot. The first programming language where the syntax, compiler, and logic were architected entirely by Artificial Intelligence.">
+    <meta property="og:image" content="https://placehold.co/1200x630/05070a/F2D578?text=Artificial+Language">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Artificial Language Project">
+
+    <!-- ==============================================
+         TWITTER CARD
+         ============================================== -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://github.com/Eng-AliKazemi/Artificial-Language">
+    <meta property="twitter:title" content="Artificial Language | AI-Architected Compiler">
+    <meta property="twitter:description" content="Discover the 'accrete' philosophy. The first end-to-end AI developed programming language.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/05070a/F2D578?text=Artificial+Language">
 
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- PRIMARY SEO METADATA -->
-    <title>Artificial Language | The First AI-Architected Language</title>
-    <meta name="description" content="Discover Artificial Language (AL), the world’s first programming language created entirely by AI. Explore the Accretion philosophy and an AI-native compilation pipeline.">
+    <link rel="canonical" href="https://github.com/Eng-AliKazemi/Artificial-Language">
+
+    <!-- ==============================================
+         SEMANTIC SCHEMA.ORG (JSON-LD)
+         ============================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Artificial Language",
+          "alternateName": "AL",
+          "operatingSystem": "Cross-platform",
+          "applicationCategory": "DeveloperApplication",
+          "description": "The world’s first programming language created entirely by AI. Features the Accretion philosophy and an AI-native compilation pipeline based on Rust.",
+          "softwareVersion": "0.0.1 APoC",
+          "author": {
+            "@type": "Person",
+            "name": "Aran Kazemi",
+            "url": "https://linkedin.com/in/e-a-k",
+            "jobTitle": "IBM Certified AI Engineer"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "programmingLanguage": {
+            "@type": "ComputerLanguage",
+            "name": "Rust"
+          }
+        },
+        {
+          "@type": "DefinedTermSet",
+          "name": "Artificial Language Terminology",
+          "description": "Specific terminology and syntax definitions for the Artificial Language project.",
+          "hasDefinedTerm": [
+            {
+              "@type": "DefinedTerm",
+              "termCode": "accrete",
+              "name": "Accrete",
+              "description": "The entry-point primitive keyword of Artificial Language. It acts as the gravitational center that gathers scattered mass, source data, logic, and dependencies into a singular executable."
+            },
+            {
+              "@type": "DefinedTerm",
+              "termCode": ".art",
+              "name": ".art Extension",
+              "description": "The file extension for Artificial Language source code, representing a canvas where AI-defined syntax resides."
+            },
+            {
+              "@type": "DefinedTerm",
+              "termCode": "APoC",
+              "name": "Architectural Proof of Concept",
+              "description": "The development stage of Artificial Language version 0.0.1."
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     
     <!-- UI DEPENDENCIES -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -102,7 +202,7 @@
         .delay-500 { transition-delay: 0.5s; }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased" itemscope itemtype="https://schema.org/SoftwareApplication">
 
     <!-- DYNAMIC BACKGROUND -->
     <canvas id="galaxy-canvas"></canvas>
@@ -116,7 +216,7 @@
     <nav class="fixed w-full z-50 glass border-b border-white/5 animate-on-scroll">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="font-header font-bold text-xl tracking-tighter">
-                ARTIFICIAL<span class="text-[#F2D578]">LANGUAGE</span>
+                <a href="#" itemprop="url">ARTIFICIAL<span class="text-[#F2D578]">LANGUAGE</span></a>
             </div>
             <div class="hidden md:flex items-center space-x-6 text-xs font-header tracking-widest uppercase">
                 <a href="#genesis" class="hover:text-[#F2D578] transition">Genesis</a>
@@ -124,7 +224,7 @@
                 <a href="#specification" class="hover:text-[#F2D578] transition">Specification</a>
                 <a href="#architecture" class="hover:text-[#F2D578] transition">Architecture</a>
                 <a href="#execution" class="hover:text-[#F2D578] transition">Lifecycle</a>
-                <span class="px-3 py-1 bg-white/10 rounded text-[10px] text-[#F2D578]">v0.0.1 APoC</span>
+                <span class="px-3 py-1 bg-white/10 rounded text-[10px] text-[#F2D578]" itemprop="softwareVersion">v0.0.1 APoC</span>
             </div>
         </div>
     </nav>
@@ -139,12 +239,12 @@
                 </span>
             </div>
             
-            <h1 class="animate-on-scroll delay-100 text-6xl md:text-9xl font-header font-bold mb-8 tracking-tighter leading-none">
+            <h1 class="animate-on-scroll delay-100 text-6xl md:text-9xl font-header font-bold mb-8 tracking-tighter leading-none" itemprop="name">
                 Artificial <br class="hidden md:block"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-[#F2D578] to-purple-500">Language</span>
             </h1>
             
-            <p class="animate-on-scroll delay-200 max-w-3xl mx-auto text-xl md:text-2xl font-light text-gray-400 mb-12 leading-relaxed">
-                The World’s First Programming Language Created Entirely by AI.
+            <p class="animate-on-scroll delay-200 max-w-4xl mx-auto text-xl md:text-2xl font-light text-gray-400 mb-12 leading-relaxed" itemprop="description">
+                The World’s First Programming Language Created Entirely by AI, establishing an end‑to‑end AI‑orchestrated software development life cycle for an AI‑architected programming language.
             </p>
 
             <div class="flex flex-wrap justify-center gap-4 mb-20">
@@ -158,7 +258,7 @@
                 </div>
                 <div class="animate-on-scroll delay-500 px-6 py-3 glass rounded-lg border border-yellow-500/30 flex items-center gap-3">
                     <i data-lucide="orbit" class="text-yellow-500"></i>
-                    <span class="text-sm font-header italic">accrete</span>
+                    <dfn class="text-sm font-header italic not-italic" title="The process of gathering code mass">accrete</dfn>
                 </div>
             </div>
 
@@ -166,7 +266,7 @@
             <div class="animate-on-scroll delay-500 relative group max-w-5xl mx-auto">
                 <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-[40px] blur-2xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
                 <div class="hero-image-glow relative">
-                    <img src="image.jpg" alt="Artificial Language v0.0.1" class="w-full h-auto block" onerror="this.src='https://placehold.co/1200x675/05070a/ffffff?text=Artificial+Language+v0.0.1';">
+                    <img src="image.jpg" alt="Artificial Language v0.0.1 Interface Visualization" itemprop="screenshot" class="w-full h-auto block" onerror="this.src='https://placehold.co/1200x675/05070a/ffffff?text=Artificial+Language+v0.0.1';">
                 </div>
             </div>
         </div>
@@ -183,7 +283,6 @@
             </h2>
 
             <div class="text-gray-300 leading-relaxed text-lg font-light">
-                <!-- Added 'text-justify' class here -->
                 <p class="animate-on-scroll delay-100 mb-8 text-justify">
                     The journey of computational intelligence began in <strong class="text-blue-400 font-header">1954</strong>, when the first high-level programming languages were forged through immense human effort under the hardest technical constraints. This foundation paved the way for <strong class="text-purple-400 font-header">1959</strong>, the birth of machine learning and autonomous logic, and <strong class="text-indigo-400 font-header">2022</strong>, when Large Language Models revolutionized the entire landscape of computer science. Then, on <strong class="text-emerald-400 font-header">January 1, 2026</strong>, a new era evolved into life: the era of machine self-development. The boundary has finally dissolved; machines now possess the power to autonomously generate entirely new programming languages, compile them directly into machine code, and execute them, creating a closed loop where silicon understands and evolves its own logic without human intervention.
                 </p>
@@ -223,7 +322,7 @@
                             <i data-lucide="orbit" class="w-4 h-4"></i> The Accretion Philosophy
                         </h4>
                         <p class="text-sm text-gray-400 leading-relaxed text-justify">
-                            In AL, <code class="text-white">accrete</code> is the technical <strong>entry-point primitive</strong>. Mirroring astrophysics, where gravity pulls cosmic dust into planets, this keyword acts as the gravitational center that gathers scattered mass, source data, logic, and dependencies, into a singular, executable physical reality (the binary).
+                            In AL, <dfn class="text-white font-mono font-bold not-italic" title="AL Key Term: Accrete">accrete</dfn> is the technical <strong>entry-point primitive</strong>. Mirroring astrophysics, where gravity pulls cosmic dust into planets, this keyword acts as the gravitational center that gathers scattered mass, source data, logic, and dependencies, into a singular, executable physical reality (the binary).
                         </p>
                     </div>
                     
@@ -295,13 +394,13 @@
                     <div class="animate-on-scroll mb-10">
                         <h3 class="text-2xl font-header text-[#F2D578] mb-4">The <code class="bg-yellow-500/10 px-2">accrete</code> Keyword</h3>
                         <p class="text-gray-400 mb-6 text-justify leading-relaxed">
-                            Technically, <code class="text-white">accrete</code> serves as the primary <strong>entry-point primitive</strong> of the language. In astrophysics, accretion is the process where gravity pulls cosmic dust into a planet; in AL, this keyword acts as the "gravitational center" that pulls scattered logic and data into a single, bootable binary. It replaces traditional "main" functions with a command that initializes the logical universe.
+                            Technically, <dfn class="text-white font-bold not-italic">accrete</dfn> serves as the primary <strong>entry-point primitive</strong> of the language. In astrophysics, accretion is the process where gravity pulls cosmic dust into a planet; in AL, this keyword acts as the "gravitational center" that pulls scattered logic and data into a single, bootable binary. It replaces traditional "main" functions with a command that initializes the logical universe.
                         </p>
                     </div>
                     <div class="animate-on-scroll delay-100 mb-10">
                         <h3 class="text-2xl font-header text-blue-400 mb-4">The <code class="bg-blue-500/10 px-2">.art</code> Canvas</h3>
                         <p class="text-gray-400 text-justify">
-                            Files ending in <code>.art</code> (Artificial) signify the workspace where logic is sculpted. Rather than traditional "source code," these files represent a "canvas" where the AI-defined syntax resides before being crystallized into machine code.
+                            Files ending in <dfn class="font-mono text-gray-200 not-italic">.art</dfn> (Artificial) signify the workspace where logic is sculpted. Rather than traditional "source code," these files represent a "canvas" where the AI-defined syntax resides before being crystallized into machine code.
                         </p>
                     </div>
                 </div>
@@ -455,15 +554,15 @@
                 "We’re entering a self-accelerating cycle where each generation of AI becomes the architect of the next"
             </p>
 
-            <div class="animate-on-scroll delay-200 flex flex-col items-center">
+            <div class="animate-on-scroll delay-200 flex flex-col items-center" itemscope itemtype="https://schema.org/Person">
                 <p class="text-xs font-header tracking-widest text-gray-500 uppercase mb-4">Developed by</p>
-                <h3 class="text-2xl font-header text-white mb-2">Aran Kazemi</h3>
-                <p class="text-[#007ACC] text-sm font-semibold mb-8">IBM Certified AI Engineer</p>
+                <h3 class="text-2xl font-header text-white mb-2" itemprop="name">Aran Kazemi</h3>
+                <p class="text-[#007ACC] text-sm font-semibold mb-8" itemprop="jobTitle">IBM Certified AI Engineer</p>
                 <div class="flex gap-4">
-                    <a href="https://linkedin.com/in/e-a-k" target="_blank" class="px-8 py-4 bg-[#0077B5] hover:bg-blue-600 rounded text-xs font-header tracking-widest flex items-center gap-2 transition">
+                    <a href="https://linkedin.com/in/e-a-k" target="_blank" itemprop="sameAs" class="px-8 py-4 bg-[#0077B5] hover:bg-blue-600 rounded text-xs font-header tracking-widest flex items-center gap-2 transition">
                         <i data-lucide="linkedin" class="w-4 h-4"></i> CONNECT
                     </a>
-                    <a href="https://github.com/Eng-AliKazemi/Artificial-Language" target="_blank" class="px-8 py-4 border border-white/20 hover:bg-white/10 rounded text-xs font-header tracking-widest transition">
+                    <a href="https://github.com/Eng-AliKazemi/Artificial-Language" target="_blank" itemprop="sameAs" class="px-8 py-4 border border-white/20 hover:bg-white/10 rounded text-xs font-header tracking-widest transition">
                         VIEW REPOSITORY
                     </a>
                 </div>
