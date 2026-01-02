@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="image.png" alt="Artificial Language" width="1000"/>
+  <img src="image.jpg" alt="Artificial Language" width="1000"/>
 </p>
 
 <div align="center">

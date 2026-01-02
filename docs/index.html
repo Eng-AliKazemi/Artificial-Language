@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Language | v0.0.1 APoC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-space: #020408;
+            --color-gold: #F2D578;
+            --color-ai-blue: #3b82f6;
+            --color-llm-purple: #8A2BE2;
+        }
+        body {
+            background-color: var(--color-space);
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-header { font-family: 'Orbitron', sans-serif; }
+        
+        .glass {
+            background: rgba(10, 15, 30, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* TEXT ALIGNMENT: LEFT AND RIGHT (JUSTIFIED) */
+        .text-justify {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        /* DYNAMIC GALAXY ELEMENTS */
+        .nebula {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .nebula-cloud {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+            animation: drift 30s infinite alternate ease-in-out;
+        }
+
+        @keyframes drift {
+            from { transform: translate(-10%, -10%) scale(1); }
+            to { transform: translate(10%, 10%) scale(1.2); }
+        }
+
+        #galaxy-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            background: radial-gradient(circle at center, #0a0f1a 0%, #020408 100%);
+        }
+
+        .hero-image-glow {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 
+                0 0 50px -10px rgba(59, 130, 246, 0.4), 
+                0 0 50px -10px rgba(138, 43, 226, 0.3);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .manifesto-card {
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.8) 0%, rgba(5, 7, 10, 0.9) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .manifesto-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--color-ai-blue), var(--color-gold), transparent);
+        }
+
+        .code-block {
+            background: #05070a;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- DYNAMIC BACKGROUND -->
+    <canvas id="galaxy-canvas"></canvas>
+    <div class="nebula">
+        <div class="nebula-cloud w-[800px] h-[800px] bg-blue-900 -top-40 -left-40"></div>
+        <div class="nebula-cloud w-[600px] h-[600px] bg-purple-900 bottom-0 right-0" style="animation-duration: 45s;"></div>
+        <div class="nebula-cloud w-[500px] h-[500px] bg-indigo-900 top-1/2 left-1/3" style="animation-delay: -5s; opacity: 0.1;"></div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-header font-bold text-xl tracking-tighter">
+                ARTIFICIAL<span class="text-[#F2D578]">LANGUAGE</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-xs font-header tracking-widest uppercase">
+                <a href="#genesis" class="hover:text-[#F2D578] transition">Genesis</a>
+                <a href="#manifesto" class="hover:text-[#F2D578] transition">Manifesto</a>
+                <a href="#specification" class="hover:text-[#F2D578] transition">Specification</a>
+                <a href="#architecture" class="hover:text-[#F2D578] transition">Architecture</a>
+                <a href="#execution" class="hover:text-[#F2D578] transition">Lifecycle</a>
+                <span class="px-3 py-1 bg-white/10 rounded text-[10px] text-[#F2D578]">v0.0.1 APoC</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative pt-48 pb-12 px-6">
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full glass border border-white/10 mb-8">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                <span class="text-[10px] font-header tracking-[0.2em] uppercase">Status: Architected by AI</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-9xl font-header font-bold mb-8 tracking-tighter leading-none">
+                Artificial <br class="hidden md:block"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-[#F2D578] to-purple-500">Language</span>
+            </h1>
+            
+            <p class="max-w-3xl mx-auto text-xl md:text-2xl font-light text-gray-400 mb-12 leading-relaxed">
+                The World’s First Programming Language Created Entirely by AI.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-20">
+                <div class="px-6 py-3 glass rounded-lg border border-blue-500/30 flex items-center gap-3">
+                    <i data-lucide="cpu" class="text-blue-500"></i>
+                    <span class="text-sm font-header">AI-Native Logic</span>
+                </div>
+                <div class="px-6 py-3 glass rounded-lg border border-purple-500/30 flex items-center gap-3">
+                    <i data-lucide="binary" class="text-purple-500"></i>
+                    <span class="text-sm font-header">Native Compilation</span>
+                </div>
+                <div class="px-6 py-3 glass rounded-lg border border-yellow-500/30 flex items-center gap-3">
+                    <i data-lucide="orbit" class="text-yellow-500"></i>
+                    <span class="text-sm font-header italic">accrete</span>
+                </div>
+            </div>
+
+            <!-- HERO IMAGE -->
+            <div class="relative group max-w-5xl mx-auto">
+                <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-[40px] blur-2xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
+                <div class="hero-image-glow relative">
+                    <img src="image.jpg" alt="Artificial Language v0.0.1" class="w-full h-auto block" onerror="this.src='https://placehold.co/1200x675/05070a/ffffff?text=Artificial+Language+v0.0.1';">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MANIFESTO SECTION -->
+    <section id="manifesto" class="py-12 px-6 relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="manifesto-card p-8 md:p-12 rounded-3xl shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <h2 class="text-3xl font-header text-white mb-6 leading-tight">
+                            The First <span class="text-[#F2D578]">End-to-End</span> AI-Architected Language
+                        </h2>
+                        <p class="text-lg text-blue-400 font-medium mb-4">
+                            Beyond Copilot: this is an Autonomous Evolution.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed mb-6 text-justify">
+                            Artificial Language (AL) represents a paradigm shift toward self-extending, self-maintaining, and self-evolving software ecosystems where AI develops its own specialized languages on-demand, tailored to specific needs. The potential for such systems is limitless, and this project serves as the foundational proof-of-concept.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-sm font-header text-[#F2D578] uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
+                                <i data-lucide="orbit" class="w-4 h-4"></i> The Accretion Philosophy
+                            </h4>
+                            <p class="text-sm text-gray-400 leading-relaxed text-justify">
+                                In AL, <code class="text-white">accrete</code> is the fundamental command. Borrowed from astrophysics, it describes how gravity pulls cosmic dust into massive planets. Here, it represents the process of pulling data and logic into a singular, executable physical reality.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-sm font-header text-purple-400 uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
+                                <i data-lucide="box" class="w-4 h-4"></i> Purposeful Minimalism
+                            </h4>
+                            <p class="text-sm text-gray-400 leading-relaxed text-justify">
+                                This Advanced Proof of Concept (APoC) is intentionally designed with a minimal footprint to introduce the potential. By stripping away complexity, we highlight the raw ability of AI to design clean, high-performance compilation pipelines without human intervention.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GENESIS SECTION (4 CARDS) -->
+    <section id="genesis" class="py-24 px-6 relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-center gap-4 mb-16">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent to-white/20"></div>
+                <h2 class="text-3xl font-header tracking-widest uppercase text-[#F2D578]">The Genesis</h2>
+                <div class="h-px flex-1 bg-gradient-to-l from-transparent to-white/20"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 text-gray-300">
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-white font-header mb-4 flex items-center gap-2">
+                        <i data-lucide="sparkles" class="w-5 h-5 text-blue-400"></i> AI-Driven Lifecycle
+                    </h3>
+                    <p class="text-justify leading-relaxed">
+                        This project serves as a definitive case study in autonomous creation. The AI was provided with a comprehensive architectural blueprint, defining quality mandates and a multi-stage implementation plan.
+                    </p>
+                </div>
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-white font-header mb-4 flex items-center gap-2">
+                        <i data-lucide="terminal" class="w-5 h-5 text-purple-400"></i> Quality Enforced
+                    </h3>
+                    <p class="text-justify leading-relaxed">
+                        Powered by Rust Systems Logic. The AI agent followed a Zero Warnings Policy, utilizing Clippy and internal verification passes to ensure memory safety and peak performance across the board.
+                    </p>
+                </div>
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-white font-header mb-4 flex items-center gap-2">
+                        <i data-lucide="brain-circuit" class="w-5 h-5 text-pink-400"></i> Meta Prompt Engineering
+                    </h3>
+                    <p class="text-justify leading-relaxed">
+                        The compiler logic was generated through high-order meta-prompting techniques. Instead of simple instructions, the AI was fed recursive constraints and architectural patterns, enabling it to self-correct during implementation.
+                    </p>
+                </div>
+                <div class="glass p-8 rounded-2xl">
+                    <h3 class="text-white font-header mb-4 flex items-center gap-2">
+                        <i data-lucide="layout-grid" class="w-5 h-5 text-emerald-400"></i> Modular Foundation
+                    </h3>
+                    <p class="text-justify leading-relaxed">
+                        The architecture is strictly decoupled. The artificial-core library exists independently of the ALC driver, providing a robust, extensible foundation for future AI-developed syntaxes and experimental language features.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIFICATION -->
+    <section id="specification" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-header tracking-widest uppercase mb-16 text-center text-white">Language Specification</h2>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-header text-[#F2D578] mb-4">The <code class="bg-yellow-500/10 px-2">accrete</code> Keyword</h3>
+                        <p class="text-gray-400 mb-6 text-justify">
+                            The <code>accrete</code> command gathers the initial mass, data and logic, that formed into an executable universe. It is the bridge between the digital canvas and the binary output.
+                        </p>
+                    </div>
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-header text-blue-400 mb-4">The <code class="bg-blue-500/10 px-2">.art</code> Canvas</h3>
+                        <p class="text-gray-400 text-justify">
+                            Files ending in <code>.art</code> (Artificial) signify the workspace where logic is sculpted. The source acts as a gravitational field where logic is pulled together into existence.
+                        </p>
+                    </div>
+                </div>
+                <div class="code-block p-8 shadow-2xl relative overflow-hidden">
+                    <div class="flex gap-2 mb-6">
+                        <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-4 font-header tracking-widest">GENESIS.ART</p>
+                    <pre class="text-lg font-mono leading-relaxed"><span class="text-gray-600">// Entry point of an AL program</span>
+<span class="text-[#F2D578]">accrete</span> <span class="text-green-400">"Hello Artificial World!"</span></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCHITECTURE GRID -->
+    <section id="architecture" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-center text-3xl font-header text-white mb-4 tracking-widest uppercase">Compiler Architecture</h2>
+            <p class="text-center text-gray-500 mb-16 font-light">A standard, robust pipeline following world-class engineering patterns.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="glass p-6 rounded-xl hover:border-blue-500/50 transition">
+                    <span class="text-xs font-header text-blue-400">01</span>
+                    <h4 class="font-header mt-2 mb-2">Lexer</h4>
+                    <p class="text-xs text-gray-500 text-justify">Scans source code and converts text into a stream of tokens.</p>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-blue-500/50 transition">
+                    <span class="text-xs font-header text-blue-400">02</span>
+                    <h4 class="font-header mt-2 mb-2">Parser</h4>
+                    <p class="text-xs text-gray-500 text-justify">Constructs an Abstract Syntax Tree (AST) representing code structure.</p>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-blue-500/50 transition">
+                    <span class="text-xs font-header text-blue-400">03</span>
+                    <h4 class="font-header mt-2 mb-2">Lowering (IR)</h4>
+                    <p class="text-xs text-gray-500 text-justify">Transforms AST into a simplified, explicit Intermediate Representation.</p>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-[#F2D578]/50 transition">
+                    <span class="text-xs font-header text-[#F2D578]">04</span>
+                    <h4 class="font-header mt-2 mb-2">Rust Backend</h4>
+                    <p class="text-xs text-gray-500 text-justify">A code generator that produces valid, high-performance Rust source.</p>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-[#F2D578]/50 transition">
+                    <span class="text-xs font-header text-[#F2D578]">05</span>
+                    <h4 class="font-header mt-2 mb-2">Emitter</h4>
+                    <p class="text-xs text-gray-500 text-justify">Invokes rustc to produce a standalone executable binary.</p>
+                </div>
+                <div class="glass p-6 rounded-xl hover:border-[#F2D578]/50 transition">
+                    <span class="text-xs font-header text-[#F2D578]">06</span>
+                    <h4 class="font-header mt-2 mb-2">ALC Driver</h4>
+                    <p class="text-xs text-gray-500 text-justify">The command-line interface orchestration the entire pipeline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE COMPILATION LIFECYCLE (6 STEPS) -->
+    <section id="execution" class="py-24 px-6 relative overflow-hidden bg-white/[0.01]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-center text-3xl font-header text-white mb-4 tracking-widest uppercase">The Compilation Lifecycle</h2>
+            <p class="text-center text-gray-500 mb-20 font-light">The technical journey from high level artificial logic to native machine execution.</p>
+            
+            <div class="space-y-12 relative">
+                <div class="absolute left-[23px] top-4 bottom-4 w-px bg-gradient-to-b from-blue-500 via-[#F2D578] to-purple-500 hidden md:block opacity-30"></div>
+                
+                <div class="flex gap-8 relative group">
+                    <div class="w-12 h-12 rounded-full glass border border-blue-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
+                        <i data-lucide="file-search" class="w-5 h-5 text-blue-400"></i>
+                    </div>
+                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-blue-500">
+                        <h4 class="font-header text-lg text-blue-400 mb-2">1. Lexer</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The Lexer scans raw source text from .art files and categorizes it into a stream of meaningful tokens. This stage identifies keywords and literal values while stripping whitespace.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-8 relative group">
+                    <div class="w-12 h-12 rounded-full glass border border-indigo-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
+                        <i data-lucide="git-branch" class="w-5 h-5 text-indigo-400"></i>
+                    </div>
+                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-indigo-500">
+                        <h4 class="font-header text-lg text-indigo-400 mb-2">2. Parser</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The Parser takes the token stream and organizes it into an AST. This tree represents the hierarchical relationship of the code logic, ensuring that grammar rules are strictly followed.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-8 relative group">
+                    <div class="w-12 h-12 rounded-full glass border border-[#F2D578]/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
+                        <i data-lucide="layers" class="w-5 h-5 text-[#F2D578]"></i>
+                    </div>
+                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-[#F2D578]">
+                        <h4 class="font-header text-lg text-[#F2D578] mb-2">3. Intermediate Representation</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The AST is lowered into a simplified IR. This serves as an architecture-neutral bridge, removing high-level syntactic sugar and preparing the program for translation.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-8 relative group">
+                    <div class="w-12 h-12 rounded-full glass border border-purple-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
+                        <i data-lucide="cpu" class="w-5 h-5 text-purple-400"></i>
+                    </div>
+                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-purple-500">
+                        <h4 class="font-header text-lg text-purple-400 mb-2">4. Native Code Generation</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The Rust Backend translates the IR into valid and idiomatic Rust source code. Targeting a systems-level language ensures memory safety and high execution speed.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-8 relative group">
+                    <div class="w-12 h-12 rounded-full glass border border-green-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
+                        <i data-lucide="zap" class="w-5 h-5 text-green-400"></i>
+                    </div>
+                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-green-500">
+                        <h4 class="font-header text-lg text-green-400 mb-2">5. Compilation</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The Emitter invokes rustc to perform machine code emission. This produce a optimized standalone binary executable that is ready for deployment.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-8 relative group">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#F2D578] to-yellow-600 flex items-center justify-center shrink-0 z-10 shadow-[0_0_20px_rgba(242,213,120,0.3)] group-hover:scale-110 transition duration-500">
+                        <i data-lucide="terminal" class="w-5 h-5 text-black"></i>
+                    </div>
+                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-yellow-500">
+                        <h4 class="font-header text-lg text-white mb-2">6. CLI</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The ALC Driver provides the final orchestration layer. This interface allows users to manage the entire pipeline from source ingestion to execution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH SINGLE LINE QUOTE -->
+    <footer class="py-24 px-6 relative mt-24">
+        <div class="absolute inset-0 bg-blue-900/10 backdrop-blur-3xl z-0"></div>
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h2 class="font-header text-2xl mb-8">Foundation for the Future</h2>
+            
+            <!-- SINGLE LINE QUOTE -->
+            <p class="text-gray-400 mb-12 italic font-light whitespace-nowrap overflow-hidden text-ellipsis">
+                "We’re entering a self-accelerating cycle where each generation of AI becomes the architect of the next"
+            </p>
+
+            <div class="flex flex-col items-center">
+                <p class="text-xs font-header tracking-widest text-gray-500 uppercase mb-4">Developed by</p>
+                <h3 class="text-2xl font-header text-white mb-2">Aran Kazemi</h3>
+                <p class="text-[#007ACC] text-sm font-semibold mb-8">IBM Certified AI Engineer</p>
+                <div class="flex gap-4">
+                    <a href="https://linkedin.com/in/e-a-k" target="_blank" class="px-8 py-4 bg-[#0077B5] hover:bg-blue-600 rounded text-xs font-header tracking-widest flex items-center gap-2 transition">
+                        <i data-lucide="linkedin" class="w-4 h-4"></i> CONNECT
+                    </a>
+                    <a href="https://github.com/Eng-AliKazemi/Artificial-Language" target="_blank" class="px-8 py-4 border border-white/20 hover:bg-white/10 rounded text-xs font-header tracking-widest transition">
+                        VIEW REPOSITORY
+                    </a>
+                </div>
+            </div>
+            <div class="mt-24 pt-8 border-t border-white/5 text-[10px] text-gray-600 font-header tracking-[0.5em] uppercase">
+                v0.0.1 AS APoC | Apache License 2.0
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const canvas = document.getElementById('galaxy-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, stars = [];
+        const starCount = 400;
+
+        class Star {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 1.5;
+                this.speed = Math.random() * 0.05 + 0.01;
+                this.brightness = Math.random();
+                this.twinkleSpeed = Math.random() * 0.01;
+            }
+            update() {
+                this.y -= this.speed;
+                if (this.y < 0) this.y = height;
+                this.brightness += this.twinkleSpeed;
+                if (this.brightness > 1 || this.brightness < 0.2) this.twinkleSpeed *= -1;
+            }
+            draw() {
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.brightness})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            stars = Array.from({length: starCount}, () => new Star());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            stars.forEach(star => { star.update(); star.draw(); });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', init);
+        init();
+        animate();
+    </script>
+</body>
+</html>
