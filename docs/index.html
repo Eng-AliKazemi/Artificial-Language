@@ -232,39 +232,40 @@
 
     <!-- MANIFESTO SECTION -->
     <section id="manifesto" class="py-12 px-6 relative z-10">
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-6xl mx-auto">
             <div class="manifesto-card p-8 md:p-12 rounded-3xl shadow-2xl">
-                <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- SINGLE LINE TITLE -->
+                <h2 class="text-3xl md:text-4xl font-header text-white mb-4 leading-tight">
+                    The First <span class="text-[#F2D578]">End-to-End</span> AI-Architected Language
+                </h2>
+                
+                <p class="text-lg text-blue-400 font-medium mb-6">
+                    Beyond Copilot: this is an Autonomous Evolution.
+                </p>
+
+                <!-- MAIN DESCRIPTION (Full Width) -->
+                <p class="text-gray-400 leading-relaxed mb-12 text-justify max-w-4xl">
+                    Artificial Language (AL) represents a paradigm shift toward self-extending software ecosystems where AI develops its own specialized languages on-demand. This project serves as the foundational proof-of-concept for autonomous software development.
+                </p>
+                
+                <!-- TWO COLUMNS, SINGLE ROW -->
+                <div class="grid md:grid-cols-2 gap-12 items-start border-t border-white/10 pt-10">
                     <div>
-                        <h2 class="text-3xl font-header text-white mb-6 leading-tight">
-                            The First <span class="text-[#F2D578]">End-to-End</span> AI-Architected Language
-                        </h2>
-                        <p class="text-lg text-blue-400 font-medium mb-4">
-                            Beyond Copilot: this is an Autonomous Evolution.
-                        </p>
-                        <p class="text-gray-400 leading-relaxed mb-6 text-justify">
-                            Artificial Language (AL) represents a paradigm shift toward self-extending, self-maintaining, and self-evolving software ecosystems where AI develops its own specialized languages on-demand, tailored to specific needs. The potential for such systems is limitless, and this project serves as the foundational proof-of-concept.
+                        <h4 class="text-sm font-header text-[#F2D578] uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                            <i data-lucide="orbit" class="w-4 h-4"></i> The Accretion Philosophy
+                        </h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">
+                            In AL, <code class="text-white">accrete</code> is the technical <strong>entry-point primitive</strong>. Mirroring astrophysics, where gravity pulls cosmic dust into planets, this keyword acts as the gravitational center that gathers scattered mass—source data, logic, and dependencies—into a singular, executable physical reality (the binary).
                         </p>
                     </div>
                     
-                    <div class="space-y-8">
-                        <div>
-                            <h4 class="text-sm font-header text-[#F2D578] uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
-                                <i data-lucide="orbit" class="w-4 h-4"></i> The Accretion Philosophy
-                            </h4>
-                            <p class="text-sm text-gray-400 leading-relaxed text-justify">
-                                In AL, <code class="text-white">accrete</code> is the fundamental command. Borrowed from astrophysics, it describes how gravity pulls cosmic dust into massive planets. Here, it represents the process of pulling data and logic into a singular, executable physical reality.
-                            </p>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-sm font-header text-purple-400 uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
-                                <i data-lucide="box" class="w-4 h-4"></i> Purposeful Minimalism
-                            </h4>
-                            <p class="text-sm text-gray-400 leading-relaxed text-justify">
-                                This Advanced Proof of Concept (APoC) is intentionally designed with a minimal footprint to introduce the potential. By stripping away complexity, we highlight the raw ability of AI to design clean, high-performance compilation pipelines without human intervention.
-                            </p>
-                        </div>
+                    <div>
+                        <h4 class="text-sm font-header text-purple-400 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                            <i data-lucide="box" class="w-4 h-4"></i> Purposeful Minimalism
+                        </h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">
+                            This APoC is intentionally designed with a minimal footprint to highlight the raw ability of AI to design clean, high-performance compilation pipelines. By stripping away human-centric bloat, we focus on the bridge between the digital canvas and the binary output.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -325,14 +326,14 @@
                 <div>
                     <div class="mb-10">
                         <h3 class="text-2xl font-header text-[#F2D578] mb-4">The <code class="bg-yellow-500/10 px-2">accrete</code> Keyword</h3>
-                        <p class="text-gray-400 mb-6 text-justify">
-                            The <code>accrete</code> command gathers the initial mass, data and logic, that formed into an executable universe. It is the bridge between the digital canvas and the binary output.
+                        <p class="text-gray-400 mb-6 text-justify leading-relaxed">
+                            Technically, <code class="text-white">accrete</code> serves as the primary <strong>entry-point primitive</strong> of the language. In astrophysics, accretion is the process where gravity pulls cosmic dust into a planet; in AL, this keyword acts as the "gravitational center" that pulls scattered logic and data into a single, bootable binary. It replaces traditional "main" functions with a command that initializes the logical universe.
                         </p>
                     </div>
                     <div class="mb-10">
                         <h3 class="text-2xl font-header text-blue-400 mb-4">The <code class="bg-blue-500/10 px-2">.art</code> Canvas</h3>
                         <p class="text-gray-400 text-justify">
-                            Files ending in <code>.art</code> (Artificial) signify the workspace where logic is sculpted. The source acts as a gravitational field where logic is pulled together into existence.
+                            Files ending in <code>.art</code> (Artificial) signify the workspace where logic is sculpted. Rather than traditional "source code," these files represent a "canvas" where the AI-defined syntax resides before being crystallized into machine code.
                         </p>
                     </div>
                 </div>
@@ -343,7 +344,7 @@
                         <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
                     </div>
                     <p class="text-xs text-gray-500 mb-4 font-header tracking-widest">GENESIS.ART</p>
-                    <pre class="text-lg font-mono leading-relaxed"><span class="text-gray-600">// Entry point of an AL program</span>
+                    <pre class="text-lg font-mono leading-relaxed"><span class="text-gray-600">// The logic 'accretes' into a binary payload</span>
 <span class="text-[#F2D578]">accrete</span> <span class="text-green-400">"Hello Artificial World!"</span></pre>
                 </div>
             </div>
@@ -353,38 +354,38 @@
     <!-- ARCHITECTURE GRID -->
     <section id="architecture" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-center text-3xl font-header text-white mb-4 tracking-widest uppercase">Compiler Architecture</h2>
-            <p class="text-center text-gray-500 mb-16 font-light">A standard, robust pipeline following world-class engineering patterns.</p>
+            <h2 class="text-center text-3xl font-header text-white mb-4 tracking-widest uppercase">Language Architecture</h2>
+            <p class="text-center text-gray-500 mb-16 font-light">Defining the unique grammar and structural boundaries architected by AI.</p>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
                 <div class="glass p-6 rounded-xl hover:border-blue-500/50 transition">
                     <span class="text-xs font-header text-blue-400">01</span>
-                    <h4 class="font-header mt-2 mb-2">Lexer</h4>
-                    <p class="text-xs text-gray-500 text-justify">Scans source code and converts text into a stream of tokens.</p>
+                    <h4 class="font-header mt-2 mb-2">Lexical Grammar</h4>
+                    <p class="text-xs text-gray-500 text-justify">Defines the new language syntax, specifically the <code class="text-blue-300">accrete</code> keyword, string literals, and the terminal punctuation rules of the <code>.art</code> canvas.</p>
                 </div>
                 <div class="glass p-6 rounded-xl hover:border-blue-500/50 transition">
                     <span class="text-xs font-header text-blue-400">02</span>
-                    <h4 class="font-header mt-2 mb-2">Parser</h4>
-                    <p class="text-xs text-gray-500 text-justify">Constructs an Abstract Syntax Tree (AST) representing code structure.</p>
+                    <h4 class="font-header mt-2 mb-2">Structural Schema</h4>
+                    <p class="text-xs text-gray-500 text-justify">The AI-defined grammar rules that govern how instructions are nested and how the Abstract Syntax Tree (AST) validates program integrity.</p>
                 </div>
                 <div class="glass p-6 rounded-xl hover:border-blue-500/50 transition">
                     <span class="text-xs font-header text-blue-400">03</span>
-                    <h4 class="font-header mt-2 mb-2">Lowering (IR)</h4>
-                    <p class="text-xs text-gray-500 text-justify">Transforms AST into a simplified, explicit Intermediate Representation.</p>
+                    <h4 class="font-header mt-2 mb-2">Logic Mapping</h4>
+                    <p class="text-xs text-gray-500 text-justify">The schema for lowering high-level artificial concepts into a stable Intermediate Representation (IR) that bridges the AI-logic with system-logic.</p>
                 </div>
                 <div class="glass p-6 rounded-xl hover:border-[#F2D578]/50 transition">
                     <span class="text-xs font-header text-[#F2D578]">04</span>
-                    <h4 class="font-header mt-2 mb-2">Rust Backend</h4>
-                    <p class="text-xs text-gray-500 text-justify">A code generator that produces valid, high-performance Rust source.</p>
+                    <h4 class="font-header mt-2 mb-2">Backend Contract</h4>
+                    <p class="text-xs text-gray-500 text-justify">Defines how AI-native logic maps to the Rust type system, ensuring that every generated line of code inherits Rust's memory safety guarantees.</p>
                 </div>
                 <div class="glass p-6 rounded-xl hover:border-[#F2D578]/50 transition">
                     <span class="text-xs font-header text-[#F2D578]">05</span>
-                    <h4 class="font-header mt-2 mb-2">Emitter</h4>
-                    <p class="text-xs text-gray-500 text-justify">Invokes rustc to produce a standalone executable binary.</p>
+                    <h4 class="font-header mt-2 mb-2">Binary Emission Rules</h4>
+                    <p class="text-xs text-gray-500 text-justify">Specific definitions for transforming code into standalone executable binaries, removing the need for interpreters or virtual machines.</p>
                 </div>
                 <div class="glass p-6 rounded-xl hover:border-[#F2D578]/50 transition">
                     <span class="text-xs font-header text-[#F2D578]">06</span>
-                    <h4 class="font-header mt-2 mb-2">ALC Driver</h4>
-                    <p class="text-xs text-gray-500 text-justify">The command-line interface orchestration the entire pipeline.</p>
+                    <h4 class="font-header mt-2 mb-2">ALC Command Set</h4>
+                    <p class="text-xs text-gray-500 text-justify">The orchestration vocabulary of the driver, defining the relationship between the developer, the source file, and the output executable.</p>
                 </div>
             </div>
         </div>
