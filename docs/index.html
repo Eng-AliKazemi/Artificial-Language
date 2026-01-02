@@ -172,6 +172,32 @@
         </div>
     </header>
 
+   <!-- HISTORICAL CONTEXT SECTION --> 
+   <section class="py-12 px-6 relative z-10 mt-12 mb-12">
+    <div class="max-w-5xl mx-auto">
+        <div class="animate-on-scroll glass p-10 rounded-3xl border border-white/10 relative overflow-hidden text-center">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/10 via-transparent to-purple-900/10 -z-10"></div>
+            
+            <h2 class="font-header text-2xl text-white mb-8 tracking-widest uppercase">
+                From <span class="text-blue-400">Silicon</span> to <span class="text-[#F2D578]">Singularity</span>
+            </h2>
+
+            <div class="text-gray-300 leading-relaxed text-lg font-light">
+                <!-- Added 'text-justify' class here -->
+                <p class="animate-on-scroll delay-100 mb-8 text-justify">
+                    The journey of computational intelligence began in <strong class="text-blue-400 font-header">1954</strong>, when the first high-level programming languages were forged through immense human effort under the hardest technical constraints. This foundation paved the way for <strong class="text-purple-400 font-header">1959</strong>, the birth of machine learning and autonomous logic, and <strong class="text-indigo-400 font-header">2022</strong>, when Large Language Models revolutionized the entire landscape of computer science. Then, on <strong class="text-emerald-400 font-header">January 1, 2026</strong>, a new era evolved into life: the era of machine self-development. The boundary has finally dissolved; machines now possess the power to autonomously generate entirely new programming languages, compile them directly into machine code, and execute them, creating a closed loop where silicon understands and evolves its own logic without human intervention.
+                </p>
+
+                <div class="animate-on-scroll delay-500 pt-6">
+                    <span class="inline-block px-8 py-3 border border-[#F2D578]/30 rounded-full bg-[#F2D578]/5 text-[#F2D578] font-header text-sm tracking-widest uppercase">
+                        This era began with this project: Artificial Language
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
     <!-- MANIFESTO SECTION -->
     <section id="manifesto" class="py-12 px-6 relative z-10">
         <div class="max-w-6xl mx-auto">
@@ -342,26 +368,29 @@
             <div class="space-y-12 relative">
                 <div class="absolute left-[23px] top-4 bottom-4 w-px bg-gradient-to-b from-blue-500 via-[#F2D578] to-purple-500 hidden md:block opacity-30"></div>
                 
+                <!-- 1. LEXER (Cyan) -->
                 <div class="animate-on-scroll flex gap-8 relative group">
-                    <div class="w-12 h-12 rounded-full glass border border-blue-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
-                        <i data-lucide="file-search" class="w-5 h-5 text-blue-400"></i>
+                    <div class="w-12 h-12 rounded-full glass border border-cyan-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
+                        <i data-lucide="file-search" class="w-5 h-5 text-cyan-400"></i>
                     </div>
-                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-blue-500">
-                        <h4 class="font-header text-lg text-blue-400 mb-2">1. Lexer</h4>
+                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-cyan-500">
+                        <h4 class="font-header text-lg text-cyan-400 mb-2">1. Lexer</h4>
                         <p class="text-sm text-gray-400 leading-relaxed text-justify">The Lexer scans raw source text from .art files and categorizes it into a stream of meaningful tokens. This stage identifies keywords and literal values while stripping whitespace.</p>
                     </div>
                 </div>
 
+                <!-- 2. PARSER (Rose/Pink) -->
                 <div class="animate-on-scroll flex gap-8 relative group">
-                    <div class="w-12 h-12 rounded-full glass border border-indigo-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
-                        <i data-lucide="git-branch" class="w-5 h-5 text-indigo-400"></i>
+                    <div class="w-12 h-12 rounded-full glass border border-rose-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
+                        <i data-lucide="git-branch" class="w-5 h-5 text-rose-400"></i>
                     </div>
-                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-indigo-500">
-                        <h4 class="font-header text-lg text-indigo-400 mb-2">2. Parser</h4>
+                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-rose-500">
+                        <h4 class="font-header text-lg text-rose-400 mb-2">2. Parser</h4>
                         <p class="text-sm text-gray-400 leading-relaxed text-justify">The Parser takes the token stream and organizes it into an AST. This tree represents the hierarchical relationship of the code logic, ensuring that grammar rules are strictly followed.</p>
                     </div>
                 </div>
 
+                <!-- 3. INTERMEDIATE REPRESENTATION (Gold/Yellow) -->
                 <div class="animate-on-scroll flex gap-8 relative group">
                     <div class="w-12 h-12 rounded-full glass border border-[#F2D578]/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
                         <i data-lucide="layers" class="w-5 h-5 text-[#F2D578]"></i>
@@ -372,32 +401,35 @@
                     </div>
                 </div>
 
+                <!-- 4. NATIVE CODE GENERATION (Violet/Purple) -->
                 <div class="animate-on-scroll flex gap-8 relative group">
-                    <div class="w-12 h-12 rounded-full glass border border-purple-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
-                        <i data-lucide="cpu" class="w-5 h-5 text-purple-400"></i>
+                    <div class="w-12 h-12 rounded-full glass border border-violet-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
+                        <i data-lucide="cpu" class="w-5 h-5 text-violet-400"></i>
                     </div>
-                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-purple-500">
-                        <h4 class="font-header text-lg text-purple-400 mb-2">4. Native Code Generation</h4>
+                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-violet-500">
+                        <h4 class="font-header text-lg text-violet-400 mb-2">4. Native Code Generation</h4>
                         <p class="text-sm text-gray-400 leading-relaxed text-justify">The Rust Backend translates the IR into valid and idiomatic Rust source code. Targeting a systems-level language ensures memory safety and high execution speed.</p>
                     </div>
                 </div>
 
+                <!-- 5. COMPILATION (Emerald/Green) -->
                 <div class="animate-on-scroll flex gap-8 relative group">
-                    <div class="w-12 h-12 rounded-full glass border border-green-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
-                        <i data-lucide="zap" class="w-5 h-5 text-green-400"></i>
+                    <div class="w-12 h-12 rounded-full glass border border-emerald-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
+                        <i data-lucide="zap" class="w-5 h-5 text-emerald-400"></i>
                     </div>
-                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-green-500">
-                        <h4 class="font-header text-lg text-green-400 mb-2">5. Compilation</h4>
+                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-emerald-500">
+                        <h4 class="font-header text-lg text-emerald-400 mb-2">5. Compilation</h4>
                         <p class="text-sm text-gray-400 leading-relaxed text-justify">The Emitter invokes rustc to perform machine code emission. This produce a optimized standalone binary executable that is ready for deployment.</p>
                     </div>
                 </div>
 
+                <!-- 6. CLI (Orange) -->
                 <div class="animate-on-scroll flex gap-8 relative group">
-                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#F2D578] to-yellow-600 flex items-center justify-center shrink-0 z-10 shadow-[0_0_20px_rgba(242,213,120,0.3)] group-hover:scale-110 transition duration-500">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shrink-0 z-10 shadow-[0_0_20px_rgba(251,146,60,0.3)] group-hover:scale-110 transition duration-500">
                         <i data-lucide="terminal" class="w-5 h-5 text-black"></i>
                     </div>
-                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-yellow-500">
-                        <h4 class="font-header text-lg text-white mb-2">6. CLI</h4>
+                    <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-orange-500">
+                        <h4 class="font-header text-lg text-orange-400 mb-2">6. CLI</h4>
                         <p class="text-sm text-gray-400 leading-relaxed text-justify">The ALC Driver provides the final orchestration layer. This interface allows users to manage the entire pipeline from source ingestion to execution.</p>
                     </div>
                 </div>
