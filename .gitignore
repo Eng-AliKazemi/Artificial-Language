@@ -1,0 +1,12 @@
+# --- Rust ---
+/target
+/ryn_build/target
+/debug
+/release
+**/*.rs.bk
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp
+*.DS_Store
