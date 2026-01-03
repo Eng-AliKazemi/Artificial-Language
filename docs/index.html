@@ -278,9 +278,9 @@
                     Autonomous Packaging: Turning Artificial Logic into Native Reality
                 </p>
 
-                <!-- MAIN DESCRIPTION (Full Width) -->
-                <p class="text-gray-400 leading-relaxed mb-12 text-justify max-w-4xl">
-                    Artificial Language (AL) represents a paradigm shift toward self-extending software ecosystems where AI develops its own specialized languages on-demand. This project serves as a comprehensive platform comprising a multi-stage compiler and a stack-based virtual machine.
+                <!-- MAIN DESCRIPTION (Full Width) - CORRECTED -->
+                <p class="text-gray-400 leading-relaxed mb-12 text-justify">
+                    Artificial Language (AL) represents a paradigm shift toward self-extending software ecosystems where AI develops its own specialized languages on-demand. This project serves as a comprehensive platform comprising a multi-stage compiler and a stack-based virtual machine, where the entire process, from initial project folder creation to final binary execution, was completed by an AI without any human intervention.
                 </p>
                 
                 <!-- TWO COLUMNS, SINGLE ROW -->
@@ -307,46 +307,79 @@
         </div>
     </section>
 
-    <!-- GENESIS SECTION (4 CARDS) -->
+    <!-- GENESIS SECTION (6 CARDS) -->
     <section id="genesis" class="py-24 px-6 relative">
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-6xl mx-auto">
             <div class="animate-on-scroll flex items-center gap-4 mb-16">
                 <div class="h-px flex-1 bg-gradient-to-r from-transparent to-white/20"></div>
                 <h2 class="text-3xl font-header tracking-widest uppercase text-[#F2D578]">The Genesis</h2>
                 <div class="h-px flex-1 bg-gradient-to-l from-transparent to-white/20"></div>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-8 text-gray-300">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-300">
+                <!-- Card 1: Multi-Stage Pipeline -->
                 <div class="animate-on-scroll glass p-8 rounded-2xl">
-                    <h3 class="text-white font-header mb-4 flex items-center gap-2">
-                        <i data-lucide="sparkles" class="w-5 h-5 text-blue-400"></i> Multi-Stage Pipeline
+                    <h3 class="text-white font-header mb-4 flex items-center gap-3">
+                        <i data-lucide="layers-3" class="w-5 h-5 text-blue-400"></i>
+                        Multi-Stage Pipeline
                     </h3>
-                    <p class="text-justify leading-relaxed">
-                        The AI agent architected a modular pipeline: Lexing, Parsing (AST), Lowering (IR), and Bytecode Compilation. This stage-based design allows the language to evolve without coupled dependencies between syntax and execution.
+                    <p class="text-sm text-justify leading-relaxed">
+                        The AI architected a modular pipeline: Lexing, Parsing (AST), Lowering (IR), and Bytecode Compilation. This stage-based design allows the language to evolve without coupled dependencies between syntax and execution.
                     </p>
                 </div>
+
+                <!-- Card 2: AI-Native Syntax -->
                 <div class="animate-on-scroll delay-100 glass p-8 rounded-2xl">
-                    <h3 class="text-white font-header mb-4 flex items-center gap-2">
-                        <i data-lucide="terminal" class="w-5 h-5 text-purple-400"></i> Zero Warnings Policy
+                    <h3 class="text-white font-header mb-4 flex items-center gap-3">
+                        <i data-lucide="atom" class="w-5 h-5 text-purple-400"></i>
+                        Custom Syntax
                     </h3>
-                    <p class="text-justify leading-relaxed">
-                        Powered by Rust's system logic, the AI agent maintained a strict Zero Warnings Policy. Every crate, core, vm, and cli, was verified through automated passes to ensure memory safety and industrial-grade stability.
+                    <p class="text-sm text-justify leading-relaxed">
+                        With the <code class="text-purple-300">accrete</code> keyword, the project established a purposeful, minimalist syntax. This reflects a logic untethered by human programming conventions, focusing purely on the act of creation.
                     </p>
                 </div>
+
+                <!-- Card 3: Stack-Based Runtime -->
                 <div class="animate-on-scroll delay-200 glass p-8 rounded-2xl">
-                    <h3 class="text-white font-header mb-4 flex items-center gap-2">
-                        <i data-lucide="brain-circuit" class="w-5 h-5 text-pink-400"></i> Stack-Based Runtime
+                    <h3 class="text-white font-header mb-4 flex items-center gap-3">
+                        <i data-lucide="cpu" class="w-5 h-5 text-pink-400"></i>
+                        Stack-Based Runtime
                     </h3>
-                    <p class="text-justify leading-relaxed">
-                        The AI developed a custom Virtual Machine with a dedicated operand stack. It handles high-performance instruction processing, including `PushConst`, `PrintLn`, and `Halt`, enabling complex data flow within a minimalist environment.
+                    <p class="text-sm text-justify leading-relaxed">
+                        A custom Virtual Machine with a dedicated operand stack was engineered from scratch. It handles high-performance instruction processing, enabling complex data flow within a minimalist environment.
                     </p>
                 </div>
+                
+                <!-- Card 4: Bytecode Serialization -->
                 <div class="animate-on-scroll delay-300 glass p-8 rounded-2xl">
-                    <h3 class="text-white font-header mb-4 flex items-center gap-2">
-                        <i data-lucide="layout-grid" class="w-5 h-5 text-emerald-400"></i> Bytecode Serialization
+                    <h3 class="text-white font-header mb-4 flex items-center gap-3">
+                        <i data-lucide="binary" class="w-5 h-5 text-emerald-400"></i>
+                        Bytecode Serialization
                     </h3>
-                    <p class="text-justify leading-relaxed">
-                        The language features a binary bytecode format (.artb) with a custom serializer. It includes a magic "ARTB" signature and constant pool deduplication, demonstrating a sophisticated grasp of binary engineering and file architecture.
+                    <p class="text-sm text-justify leading-relaxed">
+                        The AI designed a binary bytecode format (.artb) with a custom serializer. It includes a magic "ARTB" signature and constant pool deduplication, demonstrating a grasp of sophisticated binary engineering.
+                    </p>
+                </div>
+
+                <!-- Card 5: Standalone Bundling -->
+                <div class="animate-on-scroll delay-400 glass p-8 rounded-2xl">
+                    <h3 class="text-white font-header mb-4 flex items-center gap-3">
+                        <i data-lucide="package" class="w-5 h-5 text-yellow-400"></i>
+                        Standalone Bundling
+                    </h3>
+                    <p class="text-sm text-justify leading-relaxed">
+                        A bundler was created to embed the VM and bytecode into a single Rust file for native compilation. This showcases the AI's ability to produce deployable, self-contained software artifacts.
+                    </p>
+                </div>
+                
+                <!-- Card 6: Zero Warnings Policy -->
+                <div class="animate-on-scroll delay-500 glass p-8 rounded-2xl">
+                    <h3 class="text-white font-header mb-4 flex items-center gap-3">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-cyan-400"></i>
+                        Zero Warnings Policy
+                    </h3>
+                    <p class="text-sm text-justify leading-relaxed">
+                        Powered by Rust's logic, the AI maintained a strict Zero Warnings mandate. Every crate was verified to ensure memory safety, type correctness, and industrial-grade stability without human intervention.
                     </p>
                 </div>
             </div>
@@ -504,7 +537,7 @@
         </div>
     </section>
 
-    <!-- NEW TEASER TEXT -->
+    <!-- TEASER TEXT -->
     <div class="w-full text-center py-12 px-6 relative z-10">
         <h3 class="animate-on-scroll text-2xl md:text-3xl font-header font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-[#F2D578] to-purple-500 tracking-wide leading-relaxed">
             A new era of VM-native software is taking shape. Stay in touch for exciting progress ahead.
