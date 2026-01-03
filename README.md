@@ -136,7 +136,7 @@ The entire lifecycle of this project was executed autonomously by the AI agent. 
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                        ARTIFICIAL LANGUAGE COMPILER                         │
+│                        ARTIFICIAL LANGUAGE WORKFLOW                         │
 └─────────────────────────────────────────────────────────────────────────────┘
 
    main.art                         
