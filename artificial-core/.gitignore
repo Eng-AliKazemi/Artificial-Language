@@ -7,7 +7,7 @@ Cargo.lock
 
 # Generated compiler outputs
 target/artificial_out/
-**/*_art.rs
+**/*.artb
 **/*_art
 
 # OS & IDE junk

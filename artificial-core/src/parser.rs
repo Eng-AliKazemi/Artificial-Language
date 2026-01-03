@@ -56,6 +56,7 @@ impl Parser {
     fn parse_accrete_statement(&mut self) -> Result<AstStatement, ParseError> {
         self.consume(&TokenKind::Accrete)?;
         let expr = self.parse_expression()?;
+        // Semicolon is optional
         if self.check(&TokenKind::Semicolon) {
             self.consume(&TokenKind::Semicolon)?;
         }
@@ -63,27 +64,25 @@ impl Parser {
     }
 
     fn parse_expression(&mut self) -> Result<AstExpression, ParseError> {
-        match &self.current_token().kind {
+        let token = self.current_token().clone();
+        match &token.kind {
             TokenKind::StringLiteral(s) => {
                 let string = s.clone();
                 self.advance();
                 Ok(AstExpression::StringLiteral(string))
             }
-            _ => {
-                let token = self.current_token();
-                Err(ParseError {
-                    message: format!("Expected expression, found {:?}", token.kind),
-                    line: token.line,
-                    column: token.column,
-                })
-            }
+            _ => Err(ParseError {
+                message: format!("Expected expression, found {:?}", token.kind),
+                line: token.line,
+                column: token.column,
+            }),
         }
     }
 
     fn current_token(&self) -> &Token {
         self.tokens
             .get(self.position)
-            .unwrap_or_else(|| &self.tokens[self.tokens.len() - 1])
+            .unwrap_or_else(|| self.tokens.last().unwrap())
     }
 
     fn is_at_eof(&self) -> bool {

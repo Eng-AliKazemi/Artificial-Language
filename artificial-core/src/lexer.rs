@@ -54,7 +54,7 @@ impl Lexer {
         let mut tokens = Vec::new();
 
         loop {
-            self.skip_whitespace();
+            self.skip_whitespace_and_comments();
 
             if self.is_at_end() {
                 tokens.push(Token {
@@ -122,6 +122,14 @@ impl Lexer {
         }
     }
 
+    fn peek_char(&self) -> char {
+        if self.position + 1 >= self.input.len() {
+            '\0'
+        } else {
+            self.input[self.position + 1]
+        }
+    }
+
     fn advance(&mut self) {
         if !self.is_at_end() {
             if self.input[self.position] == '\n' {
@@ -138,9 +146,19 @@ impl Lexer {
         self.position >= self.input.len()
     }
 
-    fn skip_whitespace(&mut self) {
-        while !self.is_at_end() && self.current_char().is_whitespace() {
-            self.advance();
+    fn skip_whitespace_and_comments(&mut self) {
+        while !self.is_at_end() {
+            let ch = self.current_char();
+            if ch.is_whitespace() {
+                self.advance();
+            } else if ch == '/' && self.peek_char() == '/' {
+                // Line comment
+                while !self.is_at_end() && self.current_char() != '\n' {
+                    self.advance();
+                }
+            } else {
+                break;
+            }
         }
     }
 

@@ -8,10 +8,10 @@
     <!-- ==============================================
          PRIMARY SEO METADATA
          ============================================== -->
-    <title>Artificial Language (AL) | The First AI-Architected Programming Language</title>
+    <title>Artificial Language | The First AI-Architected Programming Language</title>
     <meta name="title" content="Artificial Language (AL) | The First AI-Architected Programming Language">
-    <meta name="description" content="The world’s first programming language created entirely by AI. Discover Artificial Language (AL), featuring the 'accrete' primitive, AI-native compilation, and the .art syntax canvas. Developed by Aran Kazemi.">
-    <meta name="keywords" content="Artificial Language, AL, AI Programming Language, AI Compiler, Accrete Keyword, .art file extension, Aran Kazemi, Autonomous Software Development, Rust, LLM Coding, Self-writing Software, APoC">
+    <meta name="description" content="The world’s first programming language created entirely by AI. Now featuring a custom stack-based VM, bytecode serialization, and standalone binary bundling. Developed by Aran Kazemi.">
+    <meta name="keywords" content="Artificial Language, AL, AI Programming Language, AI Compiler, Custom VM, Bytecode, Stack-based VM, Accrete Keyword, .art file extension, Aran Kazemi, Autonomous Software Development, Rust, Standalone Executable">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="Aran Kazemi">
     <meta name="generator" content="Visual Studio Code">
@@ -24,16 +24,14 @@
     <meta name="geo.placename" content="World Wide Web">
     <meta name="distribution" content="Global">
     <meta name="coverage" content="Worldwide">
-    <!-- Note: Since this is digital software, we use Global coverage rather than physical coordinates -->
 
     <!-- ==============================================
          OPEN GRAPH / FACEBOOK / LINKEDIN
          ============================================== -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://github.com/Eng-AliKazemi/Artificial-Language">
-    <meta property="og:title" content="Artificial Language | The First AI-Architected Language">
-    <meta property="og:description" content="Beyond Copilot. The first programming language where the syntax, compiler, and logic were architected entirely by Artificial Intelligence.">
-    <!-- <meta property="og:image" content="https://placehold.co/1200x630/05070a/F2D578?text=Artificial+Language"> -->
+    <meta property="og:title" content="Artificial Language | AI-Architected VM & Runtime">
+    <meta property="og:description" content="Beyond Transpilation. The first programming language where the syntax, bytecode compiler, and virtual machine were architected entirely by AI.">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Artificial Language Project">
 
@@ -42,9 +40,8 @@
          ============================================== -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://github.com/Eng-AliKazemi/Artificial-Language">
-    <meta property="twitter:title" content="Artificial Language | AI-Architected Compiler">
-    <meta property="twitter:description" content="Discover the 'accrete' philosophy. The first end-to-end AI developed programming language.">
-    <!-- <meta property="twitter:image" content="https://placehold.co/1200x630/05070a/F2D578?text=Artificial+Language"> -->
+    <meta property="twitter:title" content="Artificial Language | AI-Architected Stack VM">
+    <meta property="twitter:description" content="Discover the 'accrete' philosophy. The first end-to-end AI developed language with a custom virtual machine.">
 
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -63,49 +60,18 @@
           "alternateName": "AL",
           "operatingSystem": "Cross-platform",
           "applicationCategory": "DeveloperApplication",
-          "description": "The world’s first programming language created entirely by AI. Features the Accretion philosophy and an AI-native compilation pipeline based on Rust.",
-          "softwareVersion": "0.0.1 APoC",
+          "description": "The world’s first programming language created entirely by AI. Now featuring a stack-based VM and standalone bytecode bundling.",
+          "softwareVersion": "v0.0.2 APoC",
           "author": {
             "@type": "Person",
             "name": "Aran Kazemi",
             "url": "https://linkedin.com/in/e-a-k",
             "jobTitle": "IBM Certified AI Engineer"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0.00",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          },
           "programmingLanguage": {
             "@type": "ComputerLanguage",
             "name": "Rust"
           }
-        },
-        {
-          "@type": "DefinedTermSet",
-          "name": "Artificial Language Terminology",
-          "description": "Specific terminology and syntax definitions for the Artificial Language project.",
-          "hasDefinedTerm": [
-            {
-              "@type": "DefinedTerm",
-              "termCode": "accrete",
-              "name": "Accrete",
-              "description": "The entry-point primitive keyword of Artificial Language. It acts as the gravitational center that gathers scattered mass, source data, logic, and dependencies into a singular executable."
-            },
-            {
-              "@type": "DefinedTerm",
-              "termCode": ".art",
-              "name": ".art Extension",
-              "description": "The file extension for Artificial Language source code, representing a canvas where AI-defined syntax resides."
-            },
-            {
-              "@type": "DefinedTerm",
-              "termCode": "APoC",
-              "name": "Architectural Proof of Concept",
-              "description": "The development stage of Artificial Language version 0.0.1."
-            }
-          ]
         }
       ]
     }
@@ -224,7 +190,7 @@
                 <a href="#specification" class="hover:text-[#F2D578] transition">Specification</a>
                 <a href="#architecture" class="hover:text-[#F2D578] transition">Architecture</a>
                 <a href="#execution" class="hover:text-[#F2D578] transition">Lifecycle</a>
-                <span class="px-3 py-1 bg-white/10 rounded text-[10px] text-[#F2D578]" itemprop="softwareVersion">v0.0.1 APoC</span>
+                <span class="px-3 py-1 bg-white/10 rounded text-[10px] text-[#F2D578]" itemprop="softwareVersion">v0.0.2 APoC</span>
             </div>
         </div>
     </nav>
@@ -244,7 +210,8 @@
             </h1>
             
             <p class="animate-on-scroll delay-200 max-w-4xl mx-auto text-xl md:text-2xl font-light text-gray-400 mb-12 leading-relaxed" itemprop="description">
-                The World’s First Programming Language Created Entirely by AI, establishing an end‑to‑end AI‑orchestrated software development life cycle for an AI‑architected programming language.
+                The World’s First Programming Language Created Entirely by AI.<br> 
+                From initial syntax design to the final execution.
             </p>
 
             <div class="flex flex-wrap justify-center gap-4 mb-20">
@@ -266,7 +233,7 @@
             <div class="animate-on-scroll delay-500 relative group max-w-5xl mx-auto">
                 <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-[40px] blur-2xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
                 <div class="hero-image-glow relative">
-                    <img src="image.jpg" alt="Artificial Language v0.0.1 Interface Visualization" itemprop="screenshot" class="w-full h-auto block" onerror="this.src='https://placehold.co/1200x675/05070a/ffffff?text=Artificial+Language+v0.0.1';">
+                    <img src="image.jpg" alt="Artificial Language v0.0.2 VM Architecture Visualization" itemprop="screenshot" class="w-full h-auto block" onerror="this.src='https://placehold.co/1200x675/05070a/ffffff?text=Artificial+Language+v0.0.2';">
                 </div>
             </div>
         </div>
@@ -284,7 +251,7 @@
 
             <div class="text-gray-300 leading-relaxed text-lg font-light">
                 <p class="animate-on-scroll delay-100 mb-8 text-justify">
-                    The journey of computational intelligence began in <strong class="text-blue-400 font-header">1954</strong>, when the first high-level programming languages were forged through immense human effort under the hardest technical constraints. This foundation paved the way for <strong class="text-purple-400 font-header">1959</strong>, the birth of machine learning and autonomous logic, and <strong class="text-indigo-400 font-header">2022</strong>, when Large Language Models revolutionized the entire landscape of computer science. Then, on <strong class="text-emerald-400 font-header">January 1, 2026</strong>, a new era evolved into life: the era of machine self-development. The boundary has finally dissolved; machines now possess the power to autonomously generate entirely new programming languages, compile them directly into machine code, and execute them, creating a closed loop where silicon understands and evolves its own logic without human intervention.
+                    The journey of computational intelligence began in <strong class="text-blue-400 font-header">1954</strong>, when the first high-level programming languages were forged through human effort. This foundation led to <strong class="text-indigo-400 font-header">2022</strong>, when LLMs revolutionized computer science. Then, on <strong class="text-emerald-400 font-header">January 1, 2026</strong>, a new era evolved: the era of machine self-development. Machines now possess the power to autonomously generate entirely new programming languages, compile them into custom bytecode, and execute them via their own Virtual Machines—creating a closed loop where silicon evolves its own logic without human intervention.
                 </p>
 
                 <div class="animate-on-scroll delay-500 pt-6">
@@ -307,31 +274,31 @@
                 </h2>
                 
                 <p class="text-lg text-blue-400 font-medium mb-6">
-                    Beyond Copilot: this is an Autonomous Evolution.
+                    Autonomous Packaging: Turning Artificial Logic into Native Reality
                 </p>
 
                 <!-- MAIN DESCRIPTION (Full Width) -->
                 <p class="text-gray-400 leading-relaxed mb-12 text-justify max-w-4xl">
-                    Artificial Language (AL) represents a paradigm shift toward self-extending software ecosystems where AI develops its own specialized languages on-demand. This project serves as the foundational proof-of-concept for autonomous software development.
+                    Artificial Language (AL) represents a paradigm shift toward self-extending software ecosystems where AI develops its own specialized languages on-demand. This project serves as a comprehensive platform comprising a multi-stage compiler and a stack-based virtual machine.
                 </p>
                 
                 <!-- TWO COLUMNS, SINGLE ROW -->
                 <div class="grid md:grid-cols-2 gap-12 items-start border-t border-white/10 pt-10">
                     <div class="animate-on-scroll delay-100">
                         <h4 class="text-sm font-header text-[#F2D578] uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
-                            <i data-lucide="orbit" class="w-4 h-4"></i> The Accretion Philosophy
+                            <i data-lucide="box" class="w-4 h-4"></i> Purposeful Minimalism
                         </h4>
                         <p class="text-sm text-gray-400 leading-relaxed text-justify">
-                            In AL, <dfn class="text-white font-mono font-bold not-italic" title="AL Key Term: Accrete">accrete</dfn> is the technical <strong>entry-point primitive</strong>. Mirroring astrophysics, where gravity pulls cosmic dust into planets, this keyword acts as the gravitational center that gathers scattered mass, source data, logic, and dependencies, into a singular, executable physical reality (the binary).
+                            This APoC is intentionally designed with a minimal footprint to highlight the raw ability of AI to design clean, high-performance compilation pipelines. By stripping away human-centric bloat, we focus on the bridge between the digital canvas and the binary output.
                         </p>
                     </div>
                     
                     <div class="animate-on-scroll delay-300">
                         <h4 class="text-sm font-header text-purple-400 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
-                            <i data-lucide="box" class="w-4 h-4"></i> Purposeful Minimalism
+                            <i data-lucide="box" class="w-4 h-4"></i> Standalone Execution
                         </h4>
                         <p class="text-sm text-gray-400 leading-relaxed text-justify">
-                            This APoC is intentionally designed with a minimal footprint to highlight the raw ability of AI to design clean, high-performance compilation pipelines. By stripping away human-centric bloat, we focus on the bridge between the digital canvas and the binary output.
+                            Through native **Standalone Bundling**, AL can package its VM and serialized bytecode into a single executable. This demonstrates an AI's ability to not only write scripts but to engineer deployable, independent software artifacts.
                         </p>
                     </div>
                 </div>
@@ -351,34 +318,34 @@
             <div class="grid md:grid-cols-2 gap-8 text-gray-300">
                 <div class="animate-on-scroll glass p-8 rounded-2xl">
                     <h3 class="text-white font-header mb-4 flex items-center gap-2">
-                        <i data-lucide="sparkles" class="w-5 h-5 text-blue-400"></i> AI-Driven Lifecycle
+                        <i data-lucide="sparkles" class="w-5 h-5 text-blue-400"></i> Multi-Stage Pipeline
                     </h3>
                     <p class="text-justify leading-relaxed">
-                        This project serves as a definitive case study in autonomous creation. The AI was provided with a comprehensive architectural blueprint, defining quality mandates and a multi-stage implementation plan.
+                        The AI agent architected a modular pipeline: Lexing, Parsing (AST), Lowering (IR), and Bytecode Compilation. This stage-based design allows the language to evolve without coupled dependencies between syntax and execution.
                     </p>
                 </div>
                 <div class="animate-on-scroll delay-100 glass p-8 rounded-2xl">
                     <h3 class="text-white font-header mb-4 flex items-center gap-2">
-                        <i data-lucide="terminal" class="w-5 h-5 text-purple-400"></i> Quality Enforced
+                        <i data-lucide="terminal" class="w-5 h-5 text-purple-400"></i> Zero Warnings Policy
                     </h3>
                     <p class="text-justify leading-relaxed">
-                        Powered by Rust Systems Logic. The AI agent followed a Zero Warnings Policy, utilizing Clippy and internal verification passes to ensure memory safety and peak performance across the board.
+                        Powered by Rust's system logic, the AI agent maintained a strict Zero Warnings Policy. Every crate—core, vm, and cli—was verified through automated passes to ensure memory safety and industrial-grade stability.
                     </p>
                 </div>
                 <div class="animate-on-scroll delay-200 glass p-8 rounded-2xl">
                     <h3 class="text-white font-header mb-4 flex items-center gap-2">
-                        <i data-lucide="brain-circuit" class="w-5 h-5 text-pink-400"></i> Meta Prompt Engineering
+                        <i data-lucide="brain-circuit" class="w-5 h-5 text-pink-400"></i> Stack-Based Runtime
                     </h3>
                     <p class="text-justify leading-relaxed">
-                        The compiler logic was generated through high-order meta-prompting techniques. Instead of simple instructions, the AI was fed recursive constraints and architectural patterns, enabling it to self-correct during implementation.
+                        The AI developed a custom Virtual Machine with a dedicated operand stack. It handles high-performance instruction processing, including `PushConst`, `PrintLn`, and `Halt`, enabling complex data flow within a minimalist environment.
                     </p>
                 </div>
                 <div class="animate-on-scroll delay-300 glass p-8 rounded-2xl">
                     <h3 class="text-white font-header mb-4 flex items-center gap-2">
-                        <i data-lucide="layout-grid" class="w-5 h-5 text-emerald-400"></i> Modular Foundation
+                        <i data-lucide="layout-grid" class="w-5 h-5 text-emerald-400"></i> Bytecode Serialization
                     </h3>
                     <p class="text-justify leading-relaxed">
-                        The architecture is strictly decoupled. The artificial-core library exists independently of the ALC driver, providing a robust, extensible foundation for future AI-developed syntaxes and experimental language features.
+                        The language features a binary bytecode format (.artb) with a custom serializer. It includes a magic "ARTB" signature and constant pool deduplication, demonstrating a sophisticated grasp of binary engineering and file architecture.
                     </p>
                 </div>
             </div>
@@ -394,13 +361,13 @@
                     <div class="animate-on-scroll mb-10">
                         <h3 class="text-2xl font-header text-[#F2D578] mb-4">The <code class="bg-yellow-500/10 px-2">accrete</code> Keyword</h3>
                         <p class="text-gray-400 mb-6 text-justify leading-relaxed">
-                            Technically, <dfn class="text-white font-bold not-italic">accrete</dfn> serves as the primary <strong>entry-point primitive</strong> of the language. In astrophysics, accretion is the process where gravity pulls cosmic dust into a planet; in AL, this keyword acts as the "gravitational center" that pulls scattered logic and data into a single, executable binary. It replaces traditional "main" functions with a command that initializes the logical universe.
+                            Technically, <dfn class="text-white font-bold not-italic">accrete</dfn> triggers the creation of a bytecode sequence. The compiler maps this command to a stack operation: it pushes a reference from the Constant Pool onto the stack and invokes the VM's print handler. It stands as a unique identifier, dissimilar to human-developed keywords.
                         </p>
                     </div>
                     <div class="animate-on-scroll delay-100 mb-10">
                         <h3 class="text-2xl font-header text-blue-400 mb-4">The <code class="bg-blue-500/10 px-2">.art</code> Canvas</h3>
                         <p class="text-gray-400 text-justify">
-                            Files ending in <dfn class="font-mono text-gray-200 not-italic">.art</dfn> (Artificial) signify the workspace where logic is sculpted. Rather than traditional "source code," these files represent a "canvas" where the AI-defined syntax resides before being crystallized into machine code.
+                            Files ending in <dfn class="font-mono text-gray-200 not-italic">.art</dfn> (Artificial) represent the source genesis. These are converted into <strong>.artb</strong> (Artificial Bytecode) files, which contain the platform-independent instructions optimized for the Virtual Machine.
                         </p>
                     </div>
                 </div>
@@ -411,8 +378,8 @@
                         <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
                     </div>
                     <p class="text-xs text-gray-500 mb-4 font-header tracking-widest">GENESIS.ART</p>
-                    <pre class="text-lg font-mono leading-relaxed"><span class="text-gray-600">// The first instruction</span>
-<span class="text-[#F2D578]">accrete</span> <span class="text-green-400">"Hello Artificial World!"</span></pre>
+                    <pre class="text-lg font-mono leading-relaxed"><span class="text-gray-600">// AI-Architected Instruction</span>
+<span class="text-[#F2D578]">accrete</span> <span class="text-green-400">"The Machine Awakens."</span></pre>
                 </div>
             </div>
         </div>
@@ -422,37 +389,37 @@
     <section id="architecture" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="animate-on-scroll text-center text-3xl font-header text-white mb-4 tracking-widest uppercase">Language Architecture</h2>
-            <p class="animate-on-scroll delay-100 text-center text-gray-500 mb-16 font-light">Defining the unique grammar and structural boundaries architected by AI.</p>
+            <p class="animate-on-scroll delay-100 text-center text-gray-500 mb-16 font-light">Defining the unique grammar and VM structural boundaries architected by AI.</p>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
                 <div class="animate-on-scroll glass p-6 rounded-xl hover:border-blue-500/50 transition">
                     <span class="text-xs font-header text-blue-400">01</span>
                     <h4 class="font-header mt-2 mb-2">Lexical Grammar</h4>
-                    <p class="text-xs text-gray-500 text-justify">Defines the new language syntax, specifically the <code class="text-blue-300">accrete</code> keyword, string literals, and the terminal punctuation rules of the <code>.art</code> canvas.</p>
+                    <p class="text-xs text-gray-500 text-justify">The AI defined a strict tokenization schema that handles identifiers like <code class="text-blue-300">accrete</code>, string literals with escape sequences, and terminal punctuation.</p>
                 </div>
                 <div class="animate-on-scroll delay-100 glass p-6 rounded-xl hover:border-blue-500/50 transition">
                     <span class="text-xs font-header text-blue-400">02</span>
-                    <h4 class="font-header mt-2 mb-2">Structural Schema</h4>
-                    <p class="text-xs text-gray-500 text-justify">The AI-defined grammar rules that govern how instructions are nested and how the Abstract Syntax Tree (AST) validates program integrity.</p>
+                    <h4 class="font-header mt-2 mb-2">AST Validator</h4>
+                    <p class="text-xs text-gray-500 text-justify">A tree-based structural schema that validates program integrity. It ensures that every command adheres to the AI's logical hierarchy before IR lowering.</p>
                 </div>
                 <div class="animate-on-scroll delay-200 glass p-6 rounded-xl hover:border-blue-500/50 transition">
                     <span class="text-xs font-header text-blue-400">03</span>
-                    <h4 class="font-header mt-2 mb-2">Logic Mapping</h4>
-                    <p class="text-xs text-gray-500 text-justify">The schema for lowering high-level artificial concepts into a stable Intermediate Representation (IR) that bridges the AI-logic with system-logic.</p>
+                    <h4 class="font-header mt-2 mb-2">IR Lowering</h4>
+                    <p class="text-xs text-gray-500 text-justify">A specialized pass that transforms high-level AST nodes into a simplified Intermediate Representation (IR), decoupling the syntax from the VM's instruction set.</p>
                 </div>
                 <div class="animate-on-scroll delay-300 glass p-6 rounded-xl hover:border-[#F2D578]/50 transition">
                     <span class="text-xs font-header text-[#F2D578]">04</span>
-                    <h4 class="font-header mt-2 mb-2">Backend Contract</h4>
-                    <p class="text-xs text-gray-500 text-justify">Defines how AI-native logic maps to the Rust type system, ensuring that every generated line of code inherits Rust's memory safety guarantees.</p>
+                    <h4 class="font-header mt-2 mb-2">Instruction Set</h4>
+                    <p class="text-xs text-gray-500 text-justify">The AI engineered its own set of Opcodes (0x00-0x05) that govern stack manipulation, I/O operations, and flow control within the Virtual Machine.</p>
                 </div>
                 <div class="animate-on-scroll delay-400 glass p-6 rounded-xl hover:border-[#F2D578]/50 transition">
                     <span class="text-xs font-header text-[#F2D578]">05</span>
-                    <h4 class="font-header mt-2 mb-2">Binary Emission Rules</h4>
-                    <p class="text-xs text-gray-500 text-justify">Specific definitions for transforming code into standalone executable binaries, removing the need for interpreters or virtual machines.</p>
+                    <h4 class="font-header mt-2 mb-2">Bytecode Bundler</h4>
+                    <p class="text-xs text-gray-500 text-justify">A sophisticated bundling engine that synthesizes a standalone Rust source file, embedding both the VM logic and the bytecode for native compilation.</p>
                 </div>
                 <div class="animate-on-scroll delay-500 glass p-6 rounded-xl hover:border-[#F2D578]/50 transition">
                     <span class="text-xs font-header text-[#F2D578]">06</span>
-                    <h4 class="font-header mt-2 mb-2">ALC Command Set</h4>
-                    <p class="text-xs text-gray-500 text-justify">The orchestration vocabulary of the driver, defining the relationship between the developer, the source file, and the output executable.</p>
+                    <h4 class="font-header mt-2 mb-2">ALC CLI Driver</h4>
+                    <p class="text-xs text-gray-500 text-justify">The primary interface for the AI ecosystem, supporting bytecode emission (`--emit-bytecode`), standalone creation (`--bundle`), and debug tracing.</p>
                 </div>
             </div>
         </div>
@@ -462,7 +429,7 @@
     <section id="execution" class="py-24 px-6 relative overflow-hidden bg-white/[0.01]">
         <div class="max-w-4xl mx-auto">
             <h2 class="animate-on-scroll text-center text-3xl font-header text-white mb-4 tracking-widest uppercase">The Compilation Lifecycle</h2>
-            <p class="animate-on-scroll delay-100 text-center text-gray-500 mb-20 font-light">The technical journey from high level artificial logic to native machine execution.</p>
+            <p class="animate-on-scroll delay-100 text-center text-gray-500 mb-20 font-light">The technical journey from artificial logic to custom VM execution.</p>
             
             <div class="space-y-12 relative">
                 <div class="absolute left-[23px] top-4 bottom-4 w-px bg-gradient-to-b from-blue-500 via-[#F2D578] to-purple-500 hidden md:block opacity-30"></div>
@@ -474,7 +441,7 @@
                     </div>
                     <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-cyan-500">
                         <h4 class="font-header text-lg text-cyan-400 mb-2">1. Lexer</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The Lexer scans raw source text from .art files and categorizes it into a stream of meaningful tokens. This stage identifies keywords and literal values while stripping whitespace.</p>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The Lexer scans the raw .art file, converting text into a stream of tokens. It identifies the `accrete` keyword and manages the internal tracking of source positions for error reporting.</p>
                     </div>
                 </div>
 
@@ -485,7 +452,7 @@
                     </div>
                     <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-rose-500">
                         <h4 class="font-header text-lg text-rose-400 mb-2">2. Parser</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The Parser takes the token stream and organizes it into an AST. This tree represents the hierarchical relationship of the code logic, ensuring that grammar rules are strictly followed.</p>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The Parser consumes tokens to construct the AST. It validates that statements like `accrete` are followed by valid expressions, ensuring the program's structural validity.</p>
                     </div>
                 </div>
 
@@ -495,41 +462,41 @@
                         <i data-lucide="layers" class="w-5 h-5 text-[#F2D578]"></i>
                     </div>
                     <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-[#F2D578]">
-                        <h4 class="font-header text-lg text-[#F2D578] mb-2">3. Intermediate Representation</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The AST is lowered into a simplified IR. This serves as an architecture-neutral bridge, removing high-level syntactic sugar and preparing the program for translation.</p>
+                        <h4 class="font-header text-lg text-[#F2D578] mb-2">3. Lowering Pass (IR)</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The AST is transformed into a simplified Intermediate Representation. This pass decouples syntax from the backend, allowing the same IR to be used for different target architectures.</p>
                     </div>
                 </div>
 
-                <!-- 4. SOURCE SYNTHESIS (Violet/Purple) -->
+                <!-- 4. BYTECODE COMPILER (Violet/Purple) -->
                 <div class="animate-on-scroll flex gap-8 relative group">
                     <div class="w-12 h-12 rounded-full glass border border-violet-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
-                        <i data-lucide="file-code" class="w-5 h-5 text-violet-400"></i> <!-- Changed icon to file-code -->
+                        <i data-lucide="binary" class="w-5 h-5 text-violet-400"></i>
                     </div>
                     <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-violet-500">
-                        <h4 class="font-header text-lg text-violet-400 mb-2">4. Source Synthesis</h4> <!-- Fixed Title -->
-                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The Backend transpiles the IR into idiomatic, memory-safe Rust source code. This leverages Rust's mature ecosystem to guarantee stability while maintaining the unique logic defined by the AI.</p>
+                        <h4 class="font-header text-lg text-violet-400 mb-2">4. Bytecode Compilation</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The compiler traverses the IR to emit raw bytecode. It populates the Constant Pool with literals and maps instructions to VM-compatible opcodes like `PushConst` and `PrintLn`.</p>
                     </div>
                 </div>
 
-                <!-- 5. BINARY EMISSION (Emerald/Green) -->
+                <!-- 5. VM EXECUTION / BUNDLING (Emerald/Green) -->
                 <div class="animate-on-scroll flex gap-8 relative group">
                     <div class="w-12 h-12 rounded-full glass border border-emerald-500/50 flex items-center justify-center shrink-0 z-10 group-hover:scale-110 transition duration-500">
                         <i data-lucide="zap" class="w-5 h-5 text-emerald-400"></i>
                     </div>
                     <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-emerald-500">
-                        <h4 class="font-header text-lg text-emerald-400 mb-2">5. Binary Emission</h4> <!-- Fixed Title -->
-                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The Emitter orchestrates the final build process, optimizing the synthesized code into a standalone executable artifact that runs natively on the host architecture.</p>
+                        <h4 class="font-header text-lg text-emerald-400 mb-2">5. VM Execution & Bundling</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The VM processes the bytecode via an operand stack. Alternatively, the Bundler can embed this VM logic and bytecode into a self-contained native executable artifact.</p>
                     </div>
                 </div>
 
-                <!-- 6. CLI (Orange) -->
+                <!-- 6. CLI DRIVER (Orange) -->
                 <div class="animate-on-scroll flex gap-8 relative group">
                     <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shrink-0 z-10 shadow-[0_0_20px_rgba(251,146,60,0.3)] group-hover:scale-110 transition duration-500">
                         <i data-lucide="terminal" class="w-5 h-5 text-black"></i>
                     </div>
                     <div class="glass p-6 rounded-2xl flex-1 border-l-4 border-l-orange-500">
-                        <h4 class="font-header text-lg text-orange-400 mb-2">6. CLI</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The ALC Driver provides the final orchestration layer. This interface allows users to manage the entire pipeline from source ingestion to execution.</p>
+                        <h4 class="font-header text-lg text-orange-400 mb-2">6. ALC CLI</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed text-justify">The ALC command-line tool provides full orchestration, allowing users to compile, debug, or bundle programs with flags like `--emit-bytecode` and `--bundle`.</p>
                     </div>
                 </div>
             </div>
@@ -539,7 +506,7 @@
     <!-- NEW TEASER TEXT -->
     <div class="w-full text-center py-12 px-6 relative z-10">
         <h3 class="animate-on-scroll text-2xl md:text-3xl font-header font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-[#F2D578] to-purple-500 tracking-wide leading-relaxed">
-            A new era is taking shape. Stay in touch for exciting progress ahead.
+            A new era of VM-native software is taking shape. Stay in touch for exciting progress ahead.
         </h3>
     </div>
 
@@ -551,7 +518,7 @@
             
             <!-- SINGLE LINE QUOTE -->
             <p class="animate-on-scroll delay-100 text-gray-400 mb-12 italic font-light whitespace-nowrap overflow-hidden text-ellipsis">
-                "We’re entering a self-accelerating cycle where each generation of AI becomes the architect of the next"
+                "We’re entering a self-accelerating cycle where AI architects the virtual machines that execute its own logic"
             </p>
 
             <div class="animate-on-scroll delay-200 flex flex-col items-center" itemscope itemtype="https://schema.org/Person">
@@ -568,7 +535,7 @@
                 </div>
             </div>
             <div class="animate-on-scroll delay-300 mt-24 pt-8 border-t border-white/5 text-[10px] text-gray-600 font-header tracking-[0.5em] uppercase">
-                v0.0.1 AS APoC | Apache License 2.0
+                v0.0.2 APoC | Custom VM Engine | Apache License 2.0
             </div>
         </div>
     </footer>
@@ -625,10 +592,9 @@
         animate();
 
         // --- SCROLL ANIMATION OBSERVER ---
-        // This watches elements and toggles the 'is-visible' class
         const observerOptions = {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-            rootMargin: "0px 0px -50px 0px" // Offset slightly so it triggers before hitting the exact bottom
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -636,7 +602,6 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
                 } else {
-                    // Remove the class when it leaves the viewport to allow re-animation (up or down)
                     entry.target.classList.remove('is-visible');
                 }
             });

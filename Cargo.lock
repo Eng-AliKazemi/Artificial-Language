@@ -6,17 +6,17 @@ version = 4
 name = "ALC"
 version = "0.1.0"
 dependencies = [
- "artificial-backend-rust",
  "artificial-core",
-]
-
-[[package]]
-name = "artificial-backend-rust"
-version = "0.1.0"
-dependencies = [
- "artificial-core",
+ "artificial-vm",
 ]
 
 [[package]]
 name = "artificial-core"
 version = "0.1.0"
+
+[[package]]
+name = "artificial-vm"
+version = "0.1.0"
+dependencies = [
+ "artificial-core",
+]

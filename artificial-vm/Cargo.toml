@@ -1,8 +1,7 @@
 [package]
-name = "artificial-backend-rust"
+name = "artificial-vm"
 version.workspace = true
 edition.workspace = true
 
 [dependencies]
 artificial-core = { path = "../artificial-core" }
-

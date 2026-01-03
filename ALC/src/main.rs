@@ -1,7 +1,7 @@
 // artificial-language/ALC/src/main.rs
 mod cli;
-mod hooks;
 mod runner;
+mod bundler;
 
 use cli::parse_cli_args;
 use runner::run_compiler;
@@ -12,6 +12,13 @@ fn main() {
         Err(e) => {
             eprintln!("Error: {}", e);
             eprintln!("Usage: ALC [OPTIONS] <source-file>");
+            eprintln!();
+            eprintln!("Options:");
+            eprintln!("  --emit-bytecode    Save bytecode to .artb file");
+            eprintln!("  --no-run           Compile without executing");
+            eprintln!("  --bundle           Create standalone executable");
+            eprintln!("  --out-dir <DIR>    Output directory (default: target/artificial_out)");
+            eprintln!("  --debug            Enable debug output");
             std::process::exit(1);
         }
     };

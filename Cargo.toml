@@ -1,8 +1,9 @@
+# artificial-language/Cargo.toml
 [workspace]
 resolver = "2"
 members = [
     "artificial-core",
-    "artificial-backend-rust",
+    "artificial-vm",
     "ALC"
 ]
 

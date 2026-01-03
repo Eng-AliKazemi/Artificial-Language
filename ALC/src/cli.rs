@@ -1,8 +1,10 @@
 // artificial-language/ALC/src/cli.rs
+
 pub struct CliOptions {
     pub source_file: String,
-    pub emit_rs: bool,
+    pub emit_bytecode: bool,
     pub no_run: bool,
+    pub bundle: bool,
     pub out_dir: String,
     pub debug: bool,
 }
@@ -11,8 +13,9 @@ impl Default for CliOptions {
     fn default() -> Self {
         CliOptions {
             source_file: String::new(),
-            emit_rs: false,
+            emit_bytecode: false,
             no_run: false,
+            bundle: false,
             out_dir: "target/artificial_out".to_string(),
             debug: false,
         }
@@ -26,12 +29,16 @@ pub fn parse_cli_args() -> Result<CliOptions, String> {
 
     while i < args.len() {
         match args[i].as_str() {
-            "--emit-rs" => {
-                opts.emit_rs = true;
+            "--emit-bytecode" => {
+                opts.emit_bytecode = true;
                 i += 1;
             }
             "--no-run" => {
                 opts.no_run = true;
+                i += 1;
+            }
+            "--bundle" => {
+                opts.bundle = true;
                 i += 1;
             }
             "--debug" => {
@@ -63,5 +70,6 @@ pub fn parse_cli_args() -> Result<CliOptions, String> {
     if opts.source_file.is_empty() {
         return Err("No source file specified".to_string());
     }
+
     Ok(opts)
 }

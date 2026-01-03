@@ -9,5 +9,4 @@ path = "src/main.rs"
 
 [dependencies]
 artificial-core = { path = "../artificial-core" }
-artificial-backend-rust = { path = "../artificial-backend-rust" }
-
+artificial-vm = { path = "../artificial-vm" }
