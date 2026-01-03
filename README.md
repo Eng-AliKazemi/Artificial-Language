@@ -104,7 +104,7 @@ The multi-stage pipeline was intentionally designed for extensibility. The separ
 
 ## The `AI_INSTRUCTIONS.md`
 
-Included in this repository is the [`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md) file, provided for researchers, engineers, and enthusiasts to see how modern, professional prompt engineering works. Key methods used include:
+The [`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md) file, provided for researchers, engineers, and enthusiasts to see how modern, professional prompt engineering works. Key methods used include:
 
 *   **Role Assignment:** The AI was instructed to act as a "senior-level Rust engineer."
 *   **Goal-Oriented Directives:** A clear mission was defined with precise success criteria.
@@ -115,7 +115,7 @@ Included in this repository is the [`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md) fi
 
 ## Project Execution Flow
 
-The entire lifecycle of this project was executed autonomously by the AI agent. This is a condensed log of the AI's actions from a blank directory to a running program.
+The entire lifecycle of this project was executed autonomously by the AI agent. This is a streamlined log of the AI's actions from a blank directory to a running program.
 
 1.  **Project Scaffolding:** The AI agent created the root directory, initialized Git, and generated the Rust workspace with its member crates (`artificial-core`, `artificial-vm`, `ALC`).
 
