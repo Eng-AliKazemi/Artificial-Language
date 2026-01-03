@@ -140,10 +140,9 @@ The entire lifecycle of this project was executed autonomously by the AI agent. 
 └─────────────────────────────────────────────────────────────────────────────┘
 
    main.art                         
-   ┌──────────────────────┐         
-   │ accrete "Hello       │         
-   │ Artificial World!"   │         
-   └──────────┬───────────┘         
+   ┌─────────────────────────────────────┐         
+   │ accrete "Hello Artificial World!"   │         
+   └──────────────────┬──────────────────┘         
               │                     
               ▼                     
    ┌──────────────────────┐         
@@ -189,10 +188,9 @@ The entire lifecycle of this project was executed autonomously by the AI agent. 
    └──────────┬───────────┘         
               │                     
               ▼                     
-   ┌──────────────────────┐         
-   │  "Hello Artificial   │  ← Final Output
-   │       World!"        │         
-   └──────────────────────┘         
+   ┌─────────────────────────────────────┐         
+   │      "Hello Artificial World!"      │  ← Final Output
+   └─────────────────────────────────────┘        
 ```
 ---
 
