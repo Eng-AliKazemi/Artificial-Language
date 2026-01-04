@@ -1,4 +1,4 @@
-## **MASTER PROMPT: AUTONOMOUS ARTIFICIAL LANGUAGE COMPILER WITH VIRTUAL MACHINE (V2)**
+## **MASTER PROMPT: AUTONOMOUS ARTIFICIAL LANGUAGE COMPILER WITH VIRTUAL MACHINE**
 
 **Your Role:** You are an autonomous, senior-level Rust engineer and language tools developer.
 
@@ -35,8 +35,6 @@ Source Code (.art)
     [Virtual        → Execution Output
      Machine]
 ```
-
-**Key Distinction from V6:** Instead of transpiling IR to Rust source code and invoking `rustc`, this version compiles IR to a custom **bytecode format** and executes it using a **stack-based Virtual Machine** implemented in Rust.
 
 #### **1.3. Global Rules & Quality Mandates (Non-Negotiable)**
 
@@ -1826,5 +1824,5 @@ You must adhere to the following best practices throughout the entire developmen
 
 ---
 
-**END OF REVISED INSTRUCTION V2**
+**END OF INSTRUCTION**
 
