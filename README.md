@@ -20,18 +20,10 @@ This repository contains the world's first programming language, **Artificial La
 
 What makes this project unique is its scope; **an end‑to‑end AI‑orchestrated software development life cycle**, encompassing the full evolution of a modern programming language: from initial syntax design to the final compilation and execution of a native binary.  
 
-In the world of software engineering, creating a production‑ready compiler is considered one of the most formidable tasks. It demands a deep understanding of many complex concepts, from theoretical computer science to intricate systems architecture, all of which must be meticulously designed and developed. This complexity is why many human‑developed languages take years, or even decades, to reach a stable, mature version.
+In the world of software engineering, creating a production‑ready compiler is considered one of the most complex tasks. It demands a deep understanding of many complex concepts, from theoretical computer science to intricate systems architecture, all of which must be meticulously designed and developed. This complexity is why many human‑developed languages take years, or even decades, to reach a stable, mature version.
 
 
-This experimental project serves as a demonstration that AI is poised to revolutionize this domain. It showcases a complete, autonomous workflow: an AI agent creating a new language, building its compiler and virtual machine from scratch, and producing self-contained executables that carry out its instructions. This is the first step towards a future of self-extending, self-maintaining, and self-evolving software ecosystems where AI develops its own specialized languages on-demand.
-
----
-
-## The Power of AI Instructions
-
-This achievement was made possible through a technique known as [Meta Prompt Engineering](https://www.ibm.com/think/topics/meta-prompting), where a highly detailed, structured, and comprehensive set of instructions [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) was provided to the autonomous AI agent. This file acted as the blueprint, defining the project's architecture, goals, quality mandates, and step-by-step implementation plan and the AI agent created the project without human involvement.
-
-While this project was guided by a [Prompt Engineering](https://www.ibm.com/think/topics/prompt-engineering) and [Agentic AI](https://www.ibm.com/think/topics/agentic-ai), AI models are rapidly advancing, and their capabilities can be specifically cultivated for this purpose. Through specialized training techniques such as [Fine-Tuning](https://www.ibm.com/think/topics/fine-tuning), which hones a model's ability on domain-specific data, or [Reinforcement Learning](https://www.ibm.com/think/topics/reinforcement-learning), where an agent learns optimal strategies through trial-and-error, models can be systematically adjusted to not just follow instructions, but to generate them.
+This experimental project serves as a demonstration that AI is prepared to revolutionize this domain. It showcases a complete, autonomous workflow: an AI agent creating a new language, building its compiler and virtual machine from scratch, and producing self-contained executables that carry out its instructions. This is the first step towards a future of self-extending, self-maintaining, and self-evolving software ecosystems where AI develops its own specialized languages on-demand.
 
 ---
 
@@ -131,7 +123,6 @@ This multi-stage design establishes Artificial Language as a self-contained, ind
    └─────────────────────────────────────┘        
 ```
 
----
 
 ## From Bytecode to Native Binary
 
@@ -161,9 +152,19 @@ The multi-stage pipeline was intentionally designed for extensibility. The separ
 
 ---
 
+
+## The Power of AI Instructions
+
+This achievement was made possible through a technique known as [Meta Prompt Engineering](https://www.ibm.com/think/topics/meta-prompting), where a highly detailed, structured, and comprehensive set of instructions [AI_INSTRUCTIONS.md](AI_INSTRUCTIONS.md) was provided to the autonomous AI agent. This file acted as the blueprint, defining the project's architecture, goals, quality mandates, and step-by-step implementation plan and the AI agent created the project without human involvement.
+
+While this project was guided by a [Prompt Engineering](https://www.ibm.com/think/topics/prompt-engineering) and [Agentic AI](https://www.ibm.com/think/topics/agentic-ai), AI models are rapidly advancing, and their capabilities can be specifically cultivated for this purpose. Through specialized training techniques such as [Fine-Tuning](https://www.ibm.com/think/topics/fine-tuning), which hones a model's ability on domain-specific data, or [Reinforcement Learning](https://www.ibm.com/think/topics/reinforcement-learning), where an agent learns optimal strategies through trial-and-error, models can be systematically adjusted to not just follow instructions, but to generate them.
+
+
 ## The `AI_INSTRUCTIONS.md`
 
-The [`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md) file, provided for researchers, engineers, and enthusiasts to see how modern, professional prompt engineering works. Key methods used include:
+The [`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md) file, provided for researchers, engineers, and enthusiasts to see how modern, professional prompt engineering works. 
+
+The instructions file includes several prompt‑engineering methods presented as a meta‑prompt:
 
 *   **Role Assignment:** The AI was instructed to act as a "senior-level Rust engineer."
 *   **Goal-Oriented Directives:** A clear mission was defined with precise success criteria.
@@ -171,103 +172,104 @@ The [`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md) file, provided for researchers, e
 *   **Strict Quality Mandates:** A "Zero Warnings Policy" was enforced, forcing the AI to treat compiler warnings as critical errors.
 *   **Reference-Based, Non-Copying Generation:** The AI was provided with code examples but was explicitly forbidden from copying them, requiring it to write its own superior, idiomatic implementation.
 *   **Autonomous Self-Correction:** The AI was required to test its own output, diagnose failures, and correct its code until the goal was met.
-```
 
+```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                 AUTONOMOUS AI AGENT - COGNITIVE WORKFLOW                    │
 └─────────────────────────────────────────────────────────────────────────────┘
-
-   ╔═════════════════════════════════════════════════════════════════════════╗
-   ║ MACRO-LEVEL: PROJECT EXECUTION PLAN                                     ║
-   ║  1. Parse AI_INSTRUCTIONS.md into a sequential task list.               ║
-   ║  2. For each high-level step (e.g., "Step 6: Implement the VM")...      ║
-   ╚═════════════════════════════════════════════════════════════════════════╝
-                                     │
-                                     ▼
-   ┌─────────────────────────────────────────────────────────────────────────┐
-   │ Loop: For each sub-instruction within the current high-level step...    │
-   │                                                                         │
-   │   ┌───────────────────────────────────────────────────────────────────┐ │
-   │   │             MICRO-LEVEL: CORE COGNITIVE & ACTION CYCLE            | │
-   │   └───────────────────────────────────────────────────────────────────┘ │
-   │                                     │                                   │
-   │                                     ▼                                   │
-   │   ┌───────────────────────────────────────────────────────────────────┐ │
-   │   │ 1. READ & DECONSTRUCT INSTRUCTION                                 │ │
-   │   │    e.g., "Step 6.3: Define the Opcode enum with Nop, Halt..."     │ │
-   │   └─────────────────────────────────┬─────────────────────────────────┘ │
-   │                                     │                                   │
-   │                                     ▼                                   │
-   │   ┌───────────────────────────────────────────────────────────────────┐ │
-   │   │ 2. ANALYZE & UNDERSTAND REQUIREMENTS                              │ │
-   │   │    • Goal: Create a Rust enum named `Opcode`.                     │ │
-   │   │    • Constraints: Must derive specific traits (Debug, Clone, etc).│ │
-   │   │    • Specification: Variants must map to specific u8 values.      │ │
-   │   └─────────────────────────────────┬─────────────────────────────────┘ │
-   │                                     │                                   │
-   │                                     ▼                                   │
-   │   ┌───────────────────────────────────────────────────────────────────┐ │
-   │   │ 3. CONSULT KNOWLEDGE & REFERENCE IMPLEMENTATION                   │ │
-   │   │    • Review provided examples for idiomatic Rust patterns.        │ │
-   │   │    • Adhere to "Zero Copying Policy": Understand the concept, then│ │
-   │   │      write a unique, production-ready implementation.             │ │
-   │   └─────────────────────────────────┬─────────────────────────────────┘ │
-   │                                     │                                   │
-   │                                     ▼                                   │
-   │   ┌───────────────────────────────────────────────────────────────────┐ │
-   │   │ 4. PLAN IMPLEMENTATION                                            │ │
-   │   │    • Identify target file: `artificial-vm/src/bytecode.rs`.       │ │
-   │   │    • Formulate code structure with necessary attributes (`repr`). │ │
-   │   └─────────────────────────────────┬─────────────────────────────────┘ │
-   │                                     │                                   │
-   │                                     ▼                                   │
-   │   ┌───────────────────────────────────────────────────────────────────┐ │
-   │   │ 5. GENERATE & WRITE CODE                                          │ │
-   │   │    ```rust                                                        │ │
-   │   │    // artificial-language/artificial-vm/src/bytecode.rs           │ │
-   │   │    #[derive(Debug, Clone, Copy, PartialEq, Eq)]                   │ │
-   │   │    #[repr(u8)]                                                    │ │
-   │   │    pub enum Opcode { /* ... */ }                                  │ │
-   │   │    ```                                                            │ │
-   │   └─────────────────────────────────┬─────────────────────────────────┘ │
-   │                                     │                                   │
-   │                                     ▼                                   │
-   │   ┌───────────────────────────────────────────────────────────────────┐ │
-   │   │ 6. EXECUTE VERIFICATION COMMANDS                                  │ │
-   │   │    $ cargo build --workspace                                      │ │
-   │   │    $ cargo clippy --workspace -- -D warnings                      │ │
-   │   └─────────────────────────────────┬─────────────────────────────────┘ │
-   │                                     │                                   │
-   │                                     ▼                                   │
-   │   ┌───────────────────────────────────────────────────────────────────┐ │
-   │   │ 7. ANALYZE OUTPUT & SELF-CORRECT                                  │ │
-   │   ├───────────────────────────────────────────────────────────────────┤ │
-   │   │ IF `Error`:                                                       │ │
-   │   │   • Analyze compiler error (e.g., syntax error, type mismatch).   │ │
-   │   │   • Diagnosis: "Missing semicolon on line 12."                    │ │
-   │   │   • Generate fix and patch the code.                              │ │
-   │   │   • GOTO Step 6 (Re-verify).                                      │ │
-   │   ├───────────────────────────────────────────────────────────────────┤ │
-   │   │ IF `Warning` or `Clippy Lint` (Violates "Zero Warnings Policy"):  │ │
-   │   │   • Analyze lint message (e.g., unused variable, dead code).      │ │
-   │   │   • Diagnosis: "Variable `x` is unused."                          │ │
-   │   │   • Generate fix (e.g., prefix with `_` or add `#[allow]`).       │ │
-   │   │   • GOTO Step 6 (Re-verify).                                      │ │
-   │   ├───────────────────────────────────────────────────────────────────┤ │
-   │   │ IF `Success` (Clean Build & Pass):                                │ │
-   │   │   • Mark sub-instruction as complete.                             │ │
-   │   │   • Proceed to the next instruction in the loop.                  │ │
-   │   └───────────────────────────────────────────────────────────────────┘ │
-   │                                                                         │
-   └─────────────────────────────────────────────────────────────────────────┘
-                                     │
-                                     ▼
-   ╔═════════════════════════════════════════════════════════════════════════╗
-   ║ MACRO-LEVEL: FINAL VALIDATION                                           ║
-   ║  3. Once all steps are complete, run final integration tests.           ║
-   ║  4. Execute the main program entry point as a final success check.      ║
-   ║  5. Mission Complete.                                                   ║
-   ╚═════════════════════════════════════════════════════════════════════════╝
+                                      │
+                                      ▼
+╔═════════════════════════════════════════════════════════════════════════════╗
+║ MACRO-LEVEL: PROJECT EXECUTION PLAN                                         ║
+║  1. Parse AI_INSTRUCTIONS.md into a sequential task list.                   ║
+║  2. For each high-level step (e.g., "Step 6: Implement the VM")...          ║
+╚═════════════════════════════════════════════════════════════════════════════╝
+                                      │
+                                      ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Loop: For each sub-instruction within the current high-level step...        │
+│                                                                             │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │             MICRO-LEVEL: CORE COGNITIVE & ACTION CYCLE              │   │
+│   └──────────────────────────────────┬──────────────────────────────────┘   │
+│                                      │                                      │
+│                                      ▼                                      │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │ 1. READ & DECONSTRUCT INSTRUCTION                                   │   │
+│   │    e.g., "Step 6.3: Define the Opcode enum with Nop, Halt..."       │   │
+│   └──────────────────────────────────┬──────────────────────────────────┘   │
+│                                      │                                      │
+│                                      ▼                                      │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │ 2. ANALYZE & UNDERSTAND REQUIREMENTS                                │   │
+│   │    • Goal: Create a Rust enum named `Opcode`.                       │   │
+│   │    • Constraints: Must derive specific traits (Debug, Clone, etc).  │   │
+│   │    • Specification: Variants must map to specific u8 values.        │   │
+│   └──────────────────────────────────┬──────────────────────────────────┘   │
+│                                      │                                      │
+│                                      ▼                                      │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │ 3. CONSULT KNOWLEDGE & REFERENCE IMPLEMENTATION                     │   │
+│   │    • Review provided examples for idiomatic Rust patterns.          │   │
+│   │    • Adhere to "Zero Copying Policy": Understand the concept, then  │   │
+│   │      write a unique, production-ready implementation.               │   │
+│   └──────────────────────────────────┬──────────────────────────────────┘   │
+│                                      │                                      │
+│                                      ▼                                      │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │ 4. PLAN IMPLEMENTATION                                              │   │
+│   │    • Identify target file: `artificial-vm/src/bytecode.rs`.         │   │
+│   │    • Formulate code structure with necessary attributes (`repr`).   │   │
+│   └──────────────────────────────────┬──────────────────────────────────┘   │
+│                                      │                                      │
+│                                      ▼                                      │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │ 5. GENERATE & WRITE CODE                                            │   │
+│   │    ```rust                                                          │   │
+│   │    // artificial-language/artificial-vm/src/bytecode.rs             │   │
+│   │    #[derive(Debug, Clone, Copy, PartialEq, Eq)]                     │   │
+│   │    #[repr(u8)]                                                      │   │
+│   │    pub enum Opcode { /* ... */ }                                    │   │
+│   │    ```                                                              │   │
+│   └──────────────────────────────────┬──────────────────────────────────┘   │
+│                                      │                                      │
+│                                      ▼                                      │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │ 6. EXECUTE VERIFICATION COMMANDS                                    │   │
+│   │    $ cargo build --workspace                                        │   │
+│   │    $ cargo clippy --workspace -- -D warnings                        │   │
+│   └──────────────────────────────────┬──────────────────────────────────┘   │
+│                                      │                                      │
+│                                      ▼                                      │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │ 7. ANALYZE OUTPUT & SELF-CORRECT                                    │   │
+│   ├─────────────────────────────────────────────────────────────────────┤   │
+│   │ IF `Error`:                                                         │   │
+│   │   • Analyze compiler error (e.g., syntax error, type mismatch).     │   │
+│   │   • Diagnosis: "Missing semicolon on line 12."                      │   │
+│   │   • Generate fix and patch the code.                                │   │
+│   │   • GOTO Step 6 (Re-verify).                                        │   │
+│   ├─────────────────────────────────────────────────────────────────────┤   │
+│   │ IF `Warning` or `Clippy Lint` (Violates "Zero Warnings Policy"):    │   │
+│   │   • Analyze lint message (e.g., unused variable, dead code).        │   │
+│   │   • Diagnosis: "Variable `x` is unused."                            │   │
+│   │   • Generate fix (e.g., prefix with `_` or add `#[allow]`).         │   │
+│   │   • GOTO Step 6 (Re-verify).                                        │   │
+│   ├─────────────────────────────────────────────────────────────────────┤   │
+│   │ IF `Success` (Clean Build & Pass):                                  │   │
+│   │   • Mark sub-instruction as complete.                               │   │
+│   │   • Proceed to the next instruction in the loop.                    │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+└──────────────────────────────────────┬──────────────────────────────────────┘
+                                       │
+                                       ▼
+╔═════════════════════════════════════════════════════════════════════════════╗
+║ MACRO-LEVEL: FINAL VALIDATION                                               ║
+║  3. Once all steps are complete, run final integration tests.               ║
+║  4. Execute the main program entry point as a final success check.          ║
+║  5. Mission Complete.                                                       ║
+╚═════════════════════════════════════════════════════════════════════════════╝
 ```
 ---
 
@@ -287,7 +289,7 @@ The entire lifecycle of this project was executed autonomously by the AI agent. 
 
 6.  **Compiler Driver (`ALC`):** The AI built the main `ALC` binary, creating a command-line interface and a runner that orchestrates the entire lex -> parse -> lower -> bytecode-compile -> execute pipeline.
 
-7.  **Autonomous Verification and Self-Correction:** The AI ran its own compiler, verified the output, and ran `cargo clippy` to check for code quality. Upon finding a warning, the AI automatically edited the source code to add an `#[allow(dead_code)]` attribute, satisfying its "Zero Warnings Policy."
+7.  **Autonomous Verification and Self-Correction:** The AI ran its own compiler, verified the output, and the AI agent reviewed warnings and errors and corrected them based on the given instructions.
 
 8.  **Final Deployment and Execution:** With all tests passed and code warning-free, the AI performed the final deployment sequence, compiling the project in release mode and executing its own creation.
   
@@ -418,6 +420,9 @@ The entire lifecycle of this project was executed autonomously by the AI agent. 
 
 
 ## Demo
+
+From project creation to final file execution, without any human intervention.
+
 <p align="center">
   <img src="demo.png" alt="Artificial Language Demo" width="1000"/>
 </p>
@@ -426,11 +431,11 @@ The entire lifecycle of this project was executed autonomously by the AI agent. 
 
 ## A Foundation for the Future
 
-This project is more than a proof‑of‑concept; it is a declaration. It demonstrates that an AI can leverage the most powerful and modern infrastructures available, in this case, the Rust programming language, to build complex, reliable systems from the ground up. The choice of Rust was logical: its emphasis on safety, performance, and modern tooling makes it an ideal foundation for creating the critical software of the future.
+This project is a an advanced proof‑of‑concept (APoC) that is a declaration. It demonstrates that an AI can leverage the most powerful and modern infrastructures available, in this case, the Rust programming language as amodern system programming language, to build complex, reliable systems from the ground up. The choice of Rust was logical: its emphasis on safety, performance, and modern tooling makes it an ideal foundation for creating the critical software of the future.
 
 AI agents are the future of software development, powered by large language models capable of reasoning, generating, and orchestrating complex systems at scale.
 
-We are entering the beginning of a powerful feedback loop: AI agents, using the best of today's technology, will build the next generation of more advanced AI. This repository is a snapshot of the very first iteration of that cycle.
+We stand at the beginning of a compounding innovation loop where modern AI agents will architect the next wave of advanced systems. This repository documents the earliest stage of that trajectory.
 
 ---
 
